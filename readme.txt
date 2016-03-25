@@ -73,7 +73,7 @@ Comparing to other popup plugins, this plugin don't require using of email addre
 
 == Changelog ==
 
-= 1.2 =
+= 1.1.1 =
 - popover icon by svg image
 - scaling dialog on small screens
 - caption instead icon for popover button (text/font-size settings)
