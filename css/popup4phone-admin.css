@@ -1,0 +1,10 @@
+.popup4phone_list_pointed ul
+{
+	list-style-type: disc;
+	margin-left: 30px;
+}
+
+.popup4phone .column-id
+{
+	width: 50px;
+}

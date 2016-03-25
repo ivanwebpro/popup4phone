@@ -1,0 +1,422 @@
+/*
+	Styles below based on Bootstrap
+ * Bootstrap v3.3.2 (http://getbootstrap.com)
+ * Copyright 2011-2015 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+ */
+
+.popup4phone .form-group {
+  margin-bottom: 10px;
+}
+
+.popup4phone label {
+    display: inline-block;
+    max-width: 100%;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.popup4phone .form-control {
+  display: block;
+  width: 100%;
+  height: 34px;
+	margin: 0px;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+          box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+  -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+       -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+          transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+
+
+
+.popup4phone .form-control:focus {
+  border-color: #66afe9;
+  outline: 0;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, .6);
+          box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, .6);
+}
+.popup4phone .form-control::-moz-placeholder {
+  color: #999;
+  opacity: 1;
+}
+.popup4phone .form-control:-ms-input-placeholder {
+  color: #999;
+}
+.popup4phone .form-control::-webkit-input-placeholder {
+  color: #999;
+}
+.popup4phone .form-control[disabled],
+.popup4phone .form-control[readonly],
+fieldset[disabled] .form-control {
+  cursor: not-allowed;
+  background-color: #eee;
+  opacity: 1;
+}
+
+
+.popup4phone  .btn {
+  display: inline-block;
+  padding: 6px 12px;
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1.42857143;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -ms-touch-action: manipulation;
+      touch-action: manipulation;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  background-image: none;
+  border: 1px solid transparent;
+  border-radius: 4px;
+}
+
+.popup4phone .btn-lg,
+.popup4phone .btn-group-lg > .btn {
+  padding: 10px 16px;
+  font-size: 18px;
+  line-height: 1.3333333;
+  border-radius: 6px;
+}
+
+
+.popup4phone  .btn:focus,
+.popup4phone .btn:active:focus,
+.popup4phone .btn.active:focus,
+.popup4phone .btn.focus,
+.popup4phone .btn:active.focus,
+.popup4phone .btn.active.focus {
+  outline: thin dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+.popup4phone .btn:hover,
+.popup4phone .btn:focus,
+.popup4phone .btn.focus {
+  color: #333;
+  text-decoration: none;
+}
+.popup4phone .btn:active,
+.popup4phone .btn.active {
+  background-image: none;
+  outline: 0;
+  -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125);
+          box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125);
+}
+.popup4phone .btn.disabled,
+.popup4phone .btn[disabled],
+.popup4phone fieldset[disabled] .btn {
+  pointer-events: none;
+  cursor: not-allowed;
+  filter: alpha(opacity=65);
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  opacity: .65;
+}
+
+.popup4phone .btn-primary {
+  color: #fff;
+  background-color: #337ab7;
+  border-color: #2e6da4;
+}
+.popup4phone .btn-primary:hover,
+.popup4phone .btn-primary:focus,
+.popup4phone .btn-primary.focus,
+.popup4phone .btn-primary:active,
+.popup4phone .btn-primary.active,
+.popup4phone .open > .dropdown-toggle.btn-primary {
+  color: #fff;
+  background-color: #286090;
+  border-color: #204d74;
+}
+.popup4phone .btn-primary:active,
+.popup4phone  .btn-primary.active,
+.popup4phone  .open > .dropdown-toggle.btn-primary {
+  background-image: none;
+}
+.popup4phone .btn-primary.disabled,
+.popup4phone .btn-primary[disabled],
+.popup4phone fieldset[disabled] .btn-primary,
+.popup4phone .btn-primary.disabled:hover,
+.popup4phone .btn-primary[disabled]:hover,
+.popup4phone fieldset[disabled] .btn-primary:hover,
+.popup4phone .btn-primary.disabled:focus,
+.popup4phone .btn-primary[disabled]:focus,
+.popup4phone fieldset[disabled] .btn-primary:focus,
+.popup4phone .btn-primary.disabled.focus,
+.popup4phone .btn-primary[disabled].focus,
+.popup4phone fieldset[disabled] .btn-primary.focus,
+.popup4phone .btn-primary.disabled:active,
+.popup4phone .btn-primary[disabled]:active,
+.popup4phone fieldset[disabled] .btn-primary:active,
+.popup4phone .btn-primary.disabled.active,
+.popup4phone .btn-primary[disabled].active,
+.popup4phone fieldset[disabled] .btn-primary.active {
+  background-color: #337ab7;
+  border-color: #2e6da4;
+}
+
+.popup4phone .btn-primary {
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, .2);
+  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, .15), 0 1px 1px rgba(0, 0, 0, .075);
+          box-shadow: inset 0 1px 0 rgba(255, 255, 255, .15), 0 1px 1px rgba(0, 0, 0, .075);
+}
+
+.popup4phone .btn-primary:active,
+.popup4phone .btn-primary.active {
+  -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125);
+          box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125);
+}
+
+
+.popup4phone .btn:active,
+.popup4phone .btn.active {
+  background-image: none;
+}
+
+.popup4phone .btn-primary,
+.popup4phone .btn-primary:hover,
+.popup4phone .btn-primary:focus
+ {
+  background-image: -webkit-linear-gradient(top, #337ab7 0%, #265a88 100%);
+  background-image:      -o-linear-gradient(top, #337ab7 0%, #265a88 100%);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#337ab7), to(#265a88));
+  background-image:         linear-gradient(to bottom, #337ab7 0%, #265a88 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff337ab7', endColorstr='#ff265a88', GradientType=0);
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+  background-repeat: repeat-x;
+  border-color: #245580;
+}
+
+.popup4phone .btn-primary:hover,
+.popup4phone .btn-primary:focus {
+  background-color: #265a88;
+  background-position: 0 -15px;
+}
+.popup4phone .btn-primary:active,
+.popup4phone .btn-primary.active {
+  background-color: #265a88;
+  border-color: #245580;
+}
+.popup4phone .btn-primary.disabled,
+.popup4phone .btn-primary:disabled,
+.popup4phone .btn-primary[disabled] {
+  background-color: #265a88;
+  background-image: none;
+}
+
+
+@-webkit-keyframes progress-bar-stripes {
+  from {
+    background-position: 40px 0;
+  }
+  to {
+    background-position: 0 0;
+  }
+}
+@-o-keyframes progress-bar-stripes {
+  from {
+    background-position: 40px 0;
+  }
+  to {
+    background-position: 0 0;
+  }
+}
+@keyframes progress-bar-stripes {
+  from {
+    background-position: 40px 0;
+  }
+  to {
+    background-position: 0 0;
+  }
+}
+
+.popup4phone .progress {
+  height: 20px;
+  margin-bottom: 20px;
+  overflow: hidden;
+  background-color: #f5f5f5;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, .1);
+          box-shadow: inset 0 1px 2px rgba(0, 0, 0, .1);
+}
+
+.popup4phone .progress-bar {
+  float: left;
+  width: 0;
+  height: 100%;
+  font-size: 12px;
+  line-height: 20px;
+  color: #fff;
+  text-align: center;
+  background-color: #337ab7;
+  -webkit-box-shadow: inset 0 -1px 0 rgba(0, 0, 0, .15);
+          box-shadow: inset 0 -1px 0 rgba(0, 0, 0, .15);
+  -webkit-transition: width .6s ease;
+       -o-transition: width .6s ease;
+          transition: width .6s ease;
+}
+
+.popup4phone .progress-striped .progress-bar,
+.popup4phone .progress-bar-striped {
+  background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, .15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%, transparent 75%, transparent);
+  background-image:      -o-linear-gradient(45deg, rgba(255, 255, 255, .15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%, transparent 75%, transparent);
+  background-image:         linear-gradient(45deg, rgba(255, 255, 255, .15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%, transparent 75%, transparent);
+  -webkit-background-size: 40px 40px;
+          background-size: 40px 40px;
+}
+
+.popup4phone .progress.active .progress-bar,
+.popup4phone .progress-bar.active {
+  -webkit-animation: progress-bar-stripes 2s linear infinite;
+       -o-animation: progress-bar-stripes 2s linear infinite;
+          animation: progress-bar-stripes 2s linear infinite;
+}
+
+.popup4phone .progress-bar-success {
+  background-color: #5cb85c;
+}
+
+.popup4phone .progress-striped .progress-bar-success {
+  background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, .15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%, transparent 75%, transparent);
+  background-image:      -o-linear-gradient(45deg, rgba(255, 255, 255, .15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%, transparent 75%, transparent);
+  background-image:         linear-gradient(45deg, rgba(255, 255, 255, .15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%, transparent 75%, transparent);
+}
+
+.popup4phone .progress-bar-info {
+  background-color: #5bc0de;
+}
+
+.popup4phone .progress-striped .progress-bar-info {
+  background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, .15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%, transparent 75%, transparent);
+  background-image:      -o-linear-gradient(45deg, rgba(255, 255, 255, .15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%, transparent 75%, transparent);
+  background-image:         linear-gradient(45deg, rgba(255, 255, 255, .15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%, transparent 75%, transparent);
+}
+
+.popup4phone .progress-bar-warning {
+  background-color: #f0ad4e;
+}
+
+.popup4phone .progress-striped .progress-bar-warning {
+  background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, .15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%, transparent 75%, transparent);
+  background-image:      -o-linear-gradient(45deg, rgba(255, 255, 255, .15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%, transparent 75%, transparent);
+  background-image:         linear-gradient(45deg, rgba(255, 255, 255, .15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%, transparent 75%, transparent);
+}
+
+.popup4phone .progress-bar-danger {
+  background-color: #d9534f;
+}
+
+.popup4phone .progress-striped .progress-bar-danger {
+  background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, .15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%, transparent 75%, transparent);
+  background-image:      -o-linear-gradient(45deg, rgba(255, 255, 255, .15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%, transparent 75%, transparent);
+  background-image:         linear-gradient(45deg, rgba(255, 255, 255, .15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%, transparent 75%, transparent);
+}
+
+.popup4phone .alert {
+  padding: 15px;
+  margin-bottom: 20px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+}
+
+.popup4phone .alert h4 {
+  margin-top: 0;
+  color: inherit;
+}
+
+.popup4phone .alert .alert-link {
+  font-weight: bold;
+}
+
+.popup4phone .alert > p,
+.popup4phone .alert > ul {
+  margin-bottom: 0;
+}
+
+.popup4phone .alert > p + p {
+  margin-top: 5px;
+}
+
+.popup4phone .alert-dismissable,
+.popup4phone .alert-dismissible {
+  padding-right: 35px;
+}
+
+.popup4phone .alert-dismissable .close,
+.popup4phone .alert-dismissible .close {
+  position: relative;
+  top: -2px;
+  right: -21px;
+  color: inherit;
+}
+
+.popup4phone .alert-success {
+  color: #3c763d;
+  background-color: #dff0d8;
+  border-color: #d6e9c6;
+}
+
+.popup4phone .alert-success hr {
+  border-top-color: #c9e2b3;
+}
+
+.popup4phone .alert-success .alert-link {
+  color: #2b542c;
+}
+
+.popup4phone .alert-info {
+  color: #31708f;
+  background-color: #d9edf7;
+  border-color: #bce8f1;
+}
+
+.popup4phone .alert-info hr {
+  border-top-color: #a6e1ec;
+}
+
+.popup4phone .alert-info .alert-link {
+  color: #245269;
+}
+
+.popup4phone .alert-warning {
+  color: #8a6d3b;
+  background-color: #fcf8e3;
+  border-color: #faebcc;
+}
+
+.popup4phone .alert-warning hr {
+  border-top-color: #f7e1b5;
+}
+
+.popup4phone .alert-warning .alert-link {
+  color: #66512c;
+}
+
+.popup4phone .alert-danger {
+  color: #a94442;
+  background-color: #f2dede;
+  border-color: #ebccd1;
+}
+
+.popup4phone .alert-danger hr {
+  border-top-color: #e4b9c0;
+}
+
+.popup4phone .alert-danger .alert-link {
+  color: #843534;
+}

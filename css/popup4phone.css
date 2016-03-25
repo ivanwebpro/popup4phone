@@ -1,0 +1,118 @@
+.popup4phone {
+	font-family: Arial, sans-serif;
+  font-size: 14px;
+	color: rgb(51,51,51);
+	text-transform: none;
+}
+
+.popup4phone-form-popup {
+	border-radius: 5px;
+  background: #fff;
+  position: absolute;
+  display: none;
+  box-shadow: 1px 1px 5px rgba(0,0,0,0.2);
+  z-index: 9999999;
+}
+
+.popup4phone .close {
+	position: absolute;
+	top: 0px;
+	right: 5px;
+	font-family: Arial, Helvetica, sans-serif;
+	cursor: pointer;
+	color: black;
+	padding: 0px;
+	font-size: 30px;
+	line-height: 1;
+	font-weight: 700;
+	text-shadow: 0 1px 0 #fff;
+	opacity: 0.2;
+}
+
+.popup4phone .close:hover {
+	opacity: 0.5;
+}
+
+.popup4phone .popup4phone-form-popup-title {
+	padding: 0;
+	margin: 0;
+	font-size: 20px;
+	text-transform: none;
+	color: rgb(51, 51, 51);
+	font-weight: bold;
+}
+.popup4phone .top {
+	padding: 10px;
+	margin-top: 14px;
+}
+
+.popup4phone .areas {
+	border-top: 1px solid #e5e5e5;
+	padding: 10px 10px;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+
+.popup4phone .popup4phone-form-inline .areas
+{
+	padding-left: 0px;
+}
+
+.popup4phone .area p
+{
+	margin: 5px 0px;
+}
+
+.popup4phone form
+{
+	margin: 0px;
+}
+
+.popup4phone-fade {
+    background: rgba(0,0,0,0.3);
+    position: absolute;
+    top: 0;
+    overflow: hidden;
+    z-index: 999999;
+    left: 0;
+    display: none;
+}
+
+.popup4phone .popup4phone-popover-button
+{
+	position: fixed;
+	display: none;
+	z-index: 9999;
+	cursor: pointer;
+}
+
+.popup4phone-popover-button-inline
+{
+	cursor: pointer;
+}
+
+.popup4phone-popover-button-inline .popup4phone-popover-button-caption
+{
+	display: inline;
+}
+
+.popup4phone .popup4phone-popover-button .wrapper
+{
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	background: none;
+}
+
+
+.popup4phone input[type=submit]
+{
+	margin: 0px;
+	height: auto;
+	text-transform: none;
+}
+
+.popup4phone .form-control
+{
+	box-sizing: border-box;
+}
