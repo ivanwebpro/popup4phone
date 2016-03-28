@@ -208,8 +208,9 @@ class Popup4Phone_Settings extends Popup4Phone_Settings_Base
 			)
 		);
 
-		$k = 'popup';
+		$opts = apply_filters(Popup4Phone_Filters::SETTINGS_TABS, $opts);
 
+		$k = 'popup';
 
 		$opts[$k]['settings']['auto_popup_enabled'] = array(
 			'name' => __( 'Auto popup', 'popup4phone' ),

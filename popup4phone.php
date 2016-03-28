@@ -33,6 +33,7 @@ class Popup4Phone_Filters
 {
 	const SETTINGS_JS_BEFORE_PUBLISH = 'popup4phone_settings_js_before_publish';
 	const SETTINGS_FIELDS = 'popup4phone_settings_fields';
+	const SETTINGS_TABS = 'popup4phone_settings_tabs';
 	const FORM_SUBMIT_BEFORE_SAVE = 'popup4phone_form_submit_before_save';
 	const FORM_SUBMIT_AFTER_SAVE = 'popup4phone_form_submit_after_save';
 	const FORM_POST_REQUEST_VALIDATE = 'popup4phone_form_post_request_validate';
