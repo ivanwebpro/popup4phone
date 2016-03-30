@@ -65,7 +65,7 @@
 				?>
 	      <div class='form-group'>
 					<label for='popup4phone_message'><?php echo $s->opt('form_field_message_label'); ?></label><br>
-					<textarea id = 'popup4phone_message' class = 'form-control' name = 'popup4phone[message]' placeholder='<?php echo esc_attr($s->opt('form_field_message_placeholder')); ?>' rows='3'<?php if ($s->opt('form_field_message_required')) echo "required"; ?> style='height: 6em'></textarea>
+					<textarea id = 'popup4phone_message' class = 'form-control' name = 'popup4phone[message]' placeholder='<?php echo esc_attr($s->opt('form_field_message_placeholder')); ?>' rows='3' <?php if ($s->opt('form_field_message_required')) echo "required"; ?> style='height: 6em'></textarea>
 				</div>
 				<?php
 			}

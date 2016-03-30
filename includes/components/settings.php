@@ -313,14 +313,14 @@ class Popup4Phone_Settings extends Popup4Phone_Settings_Base
 		);
 
 		$opts[$k]['settings']['popup_button_caption_enabled'] = array(
-			'name' => __( 'Use text instead icon', 'popup4phone' ),
+			'name' => __( 'Use label instead icon', 'popup4phone' ),
 			'default' => 0,
 			'type' => 'checkbox'
 		);
 
 		$opts[$k]['settings']['popup_button_caption'] = array(
-			'name' => __( 'Text', 'popup4phone' ),
-			'default' => __( 'Callback', 'popup4phone'),
+			'name' => __( 'Label', 'popup4phone' ),
+			'default' => '',
 			'type' => 'text'
 		);
 
@@ -365,7 +365,7 @@ class Popup4Phone_Settings extends Popup4Phone_Settings_Base
 
 		$c_c_h = sprintf($c_c_f, '#FFFFFF');
 		$opts[$k]['settings']['popover_button_phone_handset_color'] = array(
-			'name' => __( 'Text / phone handset color', 'popup4phone' ),
+			'name' => __( 'Label / phone handset color', 'popup4phone' ),
 			'default' => '#FFFFFF',
 			'type' => 'color',
 			'comment' => $c_c_h,
@@ -498,8 +498,11 @@ class Popup4Phone_Settings extends Popup4Phone_Settings_Base
 
 		foreach ( $opts as $section_id => $sd )
 		{
-			if ( empty( $sd['settings'] ) )
+			if (empty($sd['settings']) || !is_array($sd['settings']))
+			{
 				unset( $opts[$section_id] );
+				continue;
+			}
 
 			foreach ( $sd['settings'] as $k => $opt )
 			{

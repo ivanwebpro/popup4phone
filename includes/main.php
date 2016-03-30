@@ -12,6 +12,14 @@ class Popup4Phone_Main extends Popup4Phone_Root
 		return dirname( dirname( __FILE__ ) );
 	}
 
+	public function filter_plugin_action_links( $links )
+	{
+		$url = $this->url_help();
+		$a = "<a href='$url'>Help</a>";
+		array_unshift( $links, $a );
+		return $links;
+	}
+
 	public function __construct()
 	{
 		parent::__construct();
@@ -81,14 +89,7 @@ class Popup4Phone_Main extends Popup4Phone_Root
     include $this->tpl_path( 'templates/admin/integrations.tpl.php' );
 	}
 
-	public function page_help()
-	{
-		$u = wp_get_current_user();
-		$admin_email = $u->user_email;
-		$admin_name = $u->user_nicename;
-		$form_url = "http://" . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
-		include $this->tpl_path( 'templates/admin/help.tpl.php' );
-	}
+
 
 	public function components()
 	{
@@ -102,6 +103,7 @@ class Popup4Phone_Main extends Popup4Phone_Root
 			'Popup4Phone_Leads',
 			'Popup4Phone_Settings',
 			'Popup4Phone_Form',
+			'Popup4Phone_Help',
 		);
 		foreach( $cls as $cl )
 		{
@@ -168,12 +170,13 @@ class Popup4Phone_Main extends Popup4Phone_Root
 		add_submenu_page( $id, $n_t, $n_m, $cap, $id . '-' . $slug,
 						array(&$this, 'page_integrations') );
 
-		$n_m = __( "Help", 'popup4phone' );
+		/*$n_m = __( "Help", 'popup4phone' );
 		$n_t = "Popup4Phone: ".$n_m;
 		$slug = 'help';
 		add_submenu_page( $id, $n_t, $n_m, $cap, $id . '-' . $slug,
-						array(&$this, 'page_help') );
+						array(&$this, 'page_help') );*/
 	}
+
 
 	public function admin_notices()
 	{

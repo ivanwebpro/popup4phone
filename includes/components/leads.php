@@ -28,7 +28,7 @@ class Popup4Phone_Leads extends Popup4Phone_Component
 	{
 		return array(
 			 array(
-				 'name' => __( 'Leads', 'popup4phone' ),
+				'name' => __( 'Leads', 'popup4phone' ),
 				'slug' => '',
 				'callback' => 'page_leads'
 			)

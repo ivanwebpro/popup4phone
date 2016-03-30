@@ -2,11 +2,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Development (trunk)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: Mon Feb 22 2016 03:30:15 GMT+0700 (Ð®Ð³Ð¾-"
+"POT-Creation-Date: Wed Mar 30 2016 22:09:29 GMT+0700 (Ð®Ð³Ð¾-"
 "ÐÐ¾ÑÑÐ¾ÑÐ½Ð°Ñ ÐÐ·Ð¸Ñ (Ð·Ð¸Ð¼Ð°))\n"
-"PO-Revision-Date: Tue Feb 23 2016 01:48:32 GMT+0700 (Ð®Ð³Ð¾-"
+"PO-Revision-Date: Wed Mar 30 2016 22:10:42 GMT+0700 (Ð®Ð³Ð¾-"
 "ÐÐ¾ÑÑÐ¾ÑÐ½Ð°Ñ ÐÐ·Ð¸Ñ (Ð·Ð¸Ð¼Ð°))\n"
-"Last-Translator: admin <subs@ivanpro.com>\n"
+"Last-Translator: admin <ivan@ivanpro.com>\n"
 "Language-Team: \n"
 "Language: Dutch\n"
 "Plural-Forms: nplurals=2; plural=n != 1\n"
@@ -24,137 +24,81 @@ msgstr ""
 "esc_html_x:1,2c;comments_number_link:2,3;t:1;st:1;trans:1;transChoice:1,2\n"
 "X-Loco-Target-Locale: nl_NL"
 
-#: ../includes/main.php:157 ../templates/admin/integrations.tpl.php:2
-msgid "Integrations"
+#: ../includes/components/settings.php:206 ../includes/components/settings.php:478
+msgid "Tracking"
 msgstr ""
 
-#: ../includes/components/leads-table.php:149 ../includes/components/leads-table.
-#: php:218 ../includes/components/leads.php:163
-msgid "Web stat"
+#: ../includes/components/settings.php:316
+msgid "Use label instead icon"
 msgstr ""
 
-#: ../includes/components/settings.php:118
-msgid "Inline form"
+#: ../includes/components/settings.php:328
+msgid "Font size"
 msgstr ""
 
-#: ../includes/components/settings.php:119
-msgid "Required"
+#: ../includes/components/settings.php:329 ../includes/components/settings.php:
+#: 344 ../includes/components/settings.php:350 ../includes/components/settings.
+#: php:356 ../includes/components/settings.php:362
+msgid "Pixels"
 msgstr ""
 
-#: ../includes/components/settings.php:120
-msgid "Label"
+#: ../includes/components/settings.php:341
+msgid "Bottom offset"
 msgstr ""
 
-#: ../includes/components/settings.php:121
-msgid "Placeholder"
+#: ../includes/components/settings.php:347
+msgid "Right offset"
 msgstr ""
 
-#: ../includes/components/settings.php:138
-msgid "Field"
+#: ../includes/components/settings.php:353
+msgid "Width"
 msgstr ""
 
-#: ../includes/components/settings.php:192
-msgid "Form"
+#: ../includes/components/settings.php:359
+msgid "Height"
 msgstr ""
 
-#: ../includes/components/settings.php:197
-msgid "Fields"
+#: ../includes/components/settings.php:368
+msgid "Label / phone handset color"
 msgstr ""
 
-#: ../includes/components/settings.php:215
-msgid "Auto popup"
+#: ../includes/components/settings.php:387
+msgid "Multiple comma-separated emails can be specified"
 msgstr ""
 
-#: ../includes/components/settings.php:236
-msgid "Examples: "
+#: ../includes/components/settings.php:489
+msgid "Tag on submit"
 msgstr ""
 
-#: ../includes/components/settings.php:238
-msgid "ask if user can't find interesting details"
+#: ../includes/components/settings.php:492
+msgid "For example, Google Conversion Tag"
 msgstr ""
 
-#: ../includes/components/settings.php:240
-msgid "invite to test"
-msgstr ""
-
-#: ../includes/components/settings.php:242
-msgid "offer to request a call back"
-msgstr ""
-
-#: ../includes/components/settings.php:244
-msgid "highlight current promotion"
-msgstr ""
-
-#: ../includes/components/settings.php:246
-msgid "give special promotion for the form submission"
-msgstr ""
-
-#: ../includes/components/settings.php:283
-msgid "Label for submit button"
-msgstr ""
-
-#: ../includes/components/settings.php:288
-msgid "Message for show during form submission"
-msgstr ""
-
-#: ../includes/components/settings.php:293
-msgid "Message for show after the form submission"
-msgstr ""
-
-#: ../includes/components/settings.php:372
-msgid "new request on web-site (*|SITE|*)"
-msgstr ""
-
-#: ../includes/components/settings.php:374
-msgid "Subject of email"
-msgstr ""
-
-#: ../includes/components/settings.php:382
-msgid "Body of email"
-msgstr ""
-
-#: ../includes/components/settings.php:395
-msgid "Events *category*"
-msgstr ""
-
-#: ../includes/components/settings.php:400
-msgid "Events on popup form opening"
-msgstr ""
-
-#: ../includes/components/settings.php:419
-msgid "Events on submit"
-msgstr ""
-
-#: ../includes/components/settings.php:441
-msgid "Google Analytics code"
-msgstr ""
-
-#: ../templates/admin/help.tpl.php:6
+#: ../templates/admin/admin_header.php:3
 #, php-format
-msgid ""
-"If you like Popup4Phone please leave a %s rating. Thank you very much in "
-"advance!"
+msgid "Want to have more leads? Click to get %s"
 msgstr ""
 
 #: ../templates/admin/help.tpl.php:12
 #, php-format
-msgid "If you have any problems - please contact me: %s"
+msgid "If you like Popup4Phone please leave a %s rating"
 msgstr ""
 
-#: ../templates/admin/help.tpl.php:20
-#, php-format
-msgid "Help to translate plugin on your language: %s"
+#. printf( __( 'If you have any problems - please contact me: %s', 'popup4phone' ), $this->html_a($url, $url, array('target' => "_blank", 'style' => "text-decoration:none")));
+#: ../templates/admin/help.tpl.php:23
+msgid "Support"
 msgstr ""
 
-#: ../templates/admin/integrations.tpl.php:5
-msgid ""
-"Do you want to integrate this plugin with another system (helpdesk, CRM, etc."
-")?"
+#: ../templates/admin/help.tpl.php:42
+msgid "Auto popup with delay after loading of the page"
 msgstr ""
 
-#: ../templates/admin/integrations.tpl.php:6
-#, php-format
-msgid "You can order it here: %s"
+#: ../templates/admin/help.tpl.php:43
+msgid "Popover/inline button, where the user can click and open the form"
+msgstr ""
+
+#: ../templates/admin/help.tpl.php:51
+msgid "inline button for open form"
 msgstr ""
 
 #. Plugin Name of the plugin/theme
@@ -177,85 +121,113 @@ msgstr "Ivan Skorodumov"
 msgid "http://popup4phone.com/author"
 msgstr "http://popup4phone.com/author"
 
-#: ../includes/main.php:163 ../templates/admin/help.tpl.php:2
+#: ../includes/main.php:167 ../templates/admin/integrations.tpl.php:3
+msgid "Integrations"
+msgstr "Integraties"
+
+#: ../includes/components/help.php:48 ../templates/admin/help.tpl.php:3
 msgid "Help"
 msgstr "Help"
 
-#: ../includes/components/leads-table.php:35
+#: ../includes/components/leads-table.php:40
 msgid "Lead"
 msgstr "Lead"
 
-#: ../includes/components/leads-table.php:36 ../includes/components/leads.php:31 .
+#: ../includes/components/leads-table.php:41 ../includes/components/leads.php:31 .
 #: ./includes/components/leads.php:40
 msgid "Leads"
 msgstr "Leads"
 
-#: ../includes/components/leads-table.php:122
+#: ../includes/components/leads-table.php:127
 msgid "No leads"
 msgstr "Geen Leads"
 
-#: ../includes/components/leads-table.php:203
+#: ../includes/components/leads-table.php:154 ../includes/components/leads-table.
+#: php:223 ../includes/components/leads.php:198
+msgid "Web stat"
+msgstr "Web stat"
+
+#: ../includes/components/leads-table.php:208
 msgid "Time"
 msgstr "Tijd"
 
-#: ../includes/components/leads-table.php:213 ../includes/components/settings.php:
-#: 231
+#: ../includes/components/leads-table.php:218 ../includes/components/settings.php:
+#: 232
 msgid "Title"
 msgstr "Titel"
 
-#: ../includes/components/leads-table.php:283
+#: ../includes/components/leads-table.php:288
 msgid "Delete"
 msgstr "Verwijder"
 
-#: ../includes/components/leads-table.php:341
+#: ../includes/components/leads-table.php:346
 #, php-format
 msgid "Lead(s) #%s have been deleted"
 msgstr "Lead(s) #%s zijn verwijderd"
 
-#: ../includes/components/leads.php:85 ../includes/components/settings.php:107 ..
-#: /templates/admin/help.tpl.php:51
-msgid "Name"
-msgstr "Naam"
-
-#: ../includes/components/leads.php:90 ../includes/components/settings.php:108
-msgid "Phone"
-msgstr "Telefoonnummer"
-
-#: ../includes/components/leads.php:100 ../includes/components/settings.php:110
-msgid "Message"
-msgstr "Bericht"
-
-#: ../includes/components/leads.php:134
+#: ../includes/components/leads.php:164
 msgid "Title of the page"
-msgstr "Titel van de pagina, waarvan formulier is ingediend"
+msgstr "Pagina titel"
 
-#: ../includes/components/leads.php:135
+#: ../includes/components/leads.php:165
 msgid "Referer"
-msgstr "Herkomst van de bezoeker"
+msgstr "Referer"
 
-#: ../includes/components/leads.php:136
+#: ../includes/components/leads.php:166
 msgid "Landing page"
 msgstr "Landingspagina"
 
-#: ../includes/components/leads.php:137
+#: ../includes/components/leads.php:167
 msgid "Visited pages"
 msgstr "Bezochte pagina's"
 
-#: ../includes/components/leads.php:138
+#: ../includes/components/leads.php:168
 msgid "Time of beginning of the session"
 msgstr "Begintijd van de sessie"
 
-#: ../includes/components/leads.php:140
+#: ../includes/components/leads.php:170
 msgid "Browser"
-msgstr "Browser van de bezoeker"
+msgstr "Browser"
 
-#: ../includes/components/settings.php:38 ../templates/admin/settings.tpl.php:10
+#: ../includes/components/settings.php:38 ../templates/admin/settings.tpl.php:11
 msgid "Settings"
 msgstr "Instellingen"
+
+#: ../includes/components/settings.php:107 ../templates/admin/help.tpl.php:68
+msgid "Name"
+msgstr "Naam"
+
+#: ../includes/components/settings.php:108
+msgid "Phone"
+msgstr "Telefoonnummer"
+
+#: ../includes/components/settings.php:110
+msgid "Message"
+msgstr "Bericht"
 
 #: ../includes/components/settings.php:117 ../includes/components/settings.php:182
 msgid "Popup form"
 msgstr "Popup formulier"
+
+#: ../includes/components/settings.php:118
+msgid "Inline form"
+msgstr "Inline formulier"
+
+#: ../includes/components/settings.php:119
+msgid "Required"
+msgstr "verplicht"
+
+#: ../includes/components/settings.php:120 ../includes/components/settings.php:322
+msgid "Label"
+msgstr "Label"
+
+#: ../includes/components/settings.php:121
+msgid "Placeholder"
+msgstr "Plaatsaanduiding"
+
+#: ../includes/components/settings.php:138
+msgid "Field"
+msgstr "Velden"
 
 #: ../includes/components/settings.php:174
 msgid ""
@@ -271,186 +243,225 @@ msgstr "Hoofd"
 
 #: ../includes/components/settings.php:187
 msgid "Button"
-msgstr "Popover knop"
+msgstr "Knop"
+
+#: ../includes/components/settings.php:192
+msgid "Form"
+msgstr "Formulier"
+
+#: ../includes/components/settings.php:197
+msgid "Fields"
+msgstr "Formulier velden"
 
 #: ../includes/components/settings.php:202
 msgid "Notifications"
 msgstr "Meldingen"
 
-#: ../includes/components/settings.php:220
-msgid "Delay for auto popup, seconds"
-msgstr "Vertraging, seconden"
+#: ../includes/components/settings.php:216
+msgid "Auto popup"
+msgstr "Automatische popup"
 
-#: ../includes/components/settings.php:225
+#: ../includes/components/settings.php:221
+msgid "Delay for auto popup, seconds"
+msgstr "Vertraging voor automatische popup, seconden"
+
+#: ../includes/components/settings.php:226
 msgid "Pause between the repeated shows for the same visitor, days"
 msgstr "Pauze tussen het opnieuw tonen aan dezelfde bezoeker, in dagen"
 
-#: ../includes/components/settings.php:232
+#: ../includes/components/settings.php:233
 msgid "Can't find something you want?"
 msgstr "Je kunt niet vinden wat je wilt?"
 
+#: ../includes/components/settings.php:237
+msgid "Examples: "
+msgstr "Voorbeelden:"
+
+#: ../includes/components/settings.php:239
+msgid "ask if user can't find interesting details"
+msgstr "vraag of gebruiker geen interessante informatie kan vinden"
+
+#: ../includes/components/settings.php:241
+msgid "invite to test"
+msgstr "uitnodigen om te testen"
+
+#: ../includes/components/settings.php:243
+msgid "offer to request a call back"
+msgstr "aanbieden om terug te bellen"
+
+#: ../includes/components/settings.php:245
+msgid "highlight current promotion"
+msgstr "huidige aanbieding markeren"
+
+#: ../includes/components/settings.php:247
+msgid "give special promotion for the form submission"
+msgstr "geef speciale korting voor versturen van formulier"
+
+#: ../includes/components/settings.php:284
+msgid "Label for submit button"
+msgstr "Label van verzendknop"
+
 #: ../includes/components/settings.php:289
+msgid "Message for show during form submission"
+msgstr "Bericht die tijdens versturen van formulier getoond wordt"
+
+#: ../includes/components/settings.php:290
 msgid "Form is being sent"
 msgstr "Formulier wordt verstuurd"
 
 #: ../includes/components/settings.php:294
+msgid "Message for show after the form submission"
+msgstr "Bericht die na versturen formulier getoond wordt"
+
+#: ../includes/components/settings.php:295
 msgid "Thanks for contacting us! We will get in touch with you shortly"
 msgstr "Bedankt voor het bericht! We nemen zo snel mogelijk contact op."
 
-#: ../includes/components/settings.php:299
-msgid "JavaScript code for execution after the form submission"
-msgstr "Javascript code die uitgevoerd wordt na indienen formulier"
-
-#: ../includes/components/settings.php:302
-msgid "To integrate with other analytic / conversion tracking systems, etc."
-msgstr "Voor integratie met andere analytic / conversie tracking systemen, etc."
-
-#: ../includes/components/settings.php:305
+#: ../includes/components/settings.php:301
 msgid "Show copyright link"
 msgstr "Toon copyright link"
 
-#: ../includes/components/settings.php:314
+#: ../includes/components/settings.php:310
 msgid "Popover button enabled"
 msgstr "Popover knop ingeschakeld"
 
-#: ../includes/components/settings.php:320
+#: ../includes/components/settings.php:335
 msgid "Animate (bounce)"
-msgstr "Popover knop animatie (stuitert)"
+msgstr "Animatie (stuitert)"
 
-#: ../includes/components/settings.php:325
-msgid "In order to avoid overlapping with the \"Scroll to Top\" button"
-msgstr "Om overlap met de \"Scroll naar boven\" knop te voorkomen"
-
-#: ../includes/components/settings.php:327
-msgid "Bottom offset, px"
-msgstr "Ruimte onderkant van popover knop, px "
-
-#: ../includes/components/settings.php:333
-msgid "Right offset, px"
-msgstr "Ruimte rechterkant van popover knop, px "
-
-#: ../includes/components/settings.php:339
-msgid "Width, px"
-msgstr "Popover knop breedte, px"
-
-#: ../includes/components/settings.php:344
-msgid "Height, px"
-msgstr "Popover knop hoogte, px"
-
-#: ../includes/components/settings.php:348
+#: ../includes/components/settings.php:364
 #, php-format
 msgid "Hexadecimal value, for example, %s"
 msgstr "Hexadecimale waarde, voorbeeld, %s"
 
-#: ../includes/components/settings.php:352
-msgid "Phone handset color"
-msgstr "Popover knop, telefoon handset kleur"
-
-#: ../includes/components/settings.php:360
+#: ../includes/components/settings.php:376
 msgid "Background color"
-msgstr "Popover knop, achtergrond kleur"
+msgstr "Achtergrondkleur"
 
-#: ../includes/components/settings.php:368
+#: ../includes/components/settings.php:384
 msgid "Send notify about new lead to email"
 msgstr "Stuur notificatie over nieuwe lead naar e-mailadres"
 
-#: ../includes/components/settings.php:390
+#: ../includes/components/settings.php:389
+msgid "new request on web-site (*|SITE|*)"
+msgstr "nieuw verzoek op website (*|SITE|*)"
+
+#: ../includes/components/settings.php:391
+msgid "Subject of email"
+msgstr "Onderwerp van e-mail"
+
+#: ../includes/components/settings.php:399
+msgid "Body of email"
+msgstr "Body van e-mail"
+
+#: ../includes/components/settings.php:407
 msgid "Send events"
-msgstr "Stuur events naar Google Analytics"
+msgstr "Verstuur events"
 
-#: ../includes/components/settings.php:404 ../includes/components/settings.php:423
+#: ../includes/components/settings.php:412
+msgid "Events *category*"
+msgstr "Event *categorie*"
+
+#: ../includes/components/settings.php:417
+msgid "Events on popup form opening"
+msgstr "Gevolgen op moment van openen formulier via popup"
+
+#: ../includes/components/settings.php:421 ../includes/components/settings.php:440
 msgid "Action"
-msgstr "Actie"
+msgstr "Handeling"
 
-#: ../includes/components/settings.php:409
+#: ../includes/components/settings.php:426
 msgid "Label on *auto* opening"
-msgstr ""
-"Google Analytics event *label* wanneer popup formulier *automatisch* geopend "
-"wordt"
+msgstr "Label bij *automatisch* openen"
 
-#: ../includes/components/settings.php:414
+#: ../includes/components/settings.php:431
 msgid "Label on opening *by click*"
-msgstr ""
-"Google Analytics event *label* wanneer popup formulier *via klik* geopend "
-"wordt"
+msgstr "Label bij openen *via klik*"
 
-#: ../includes/components/settings.php:428
+#: ../includes/components/settings.php:436
+msgid "Events on submit"
+msgstr "Gevolgen op moment van versturen"
+
+#: ../includes/components/settings.php:445
 msgid "Label for *inline* form"
-msgstr "Google Analytics event *label* wanneer *inline* formulier ingediend wordt"
+msgstr "Label voor *inline* formulier"
 
-#: ../includes/components/settings.php:433
+#: ../includes/components/settings.php:450
 msgid "Label for *popup* form"
-msgstr "Google Analytics event *label* wanneer *popup* formulier ingediend wordt"
+msgstr "Label voor *popup* formulier"
 
-#: ../includes/components/settings.php:438
+#: ../includes/components/settings.php:455
 msgid "Isn't needed if you had already inserted Google Analytics code"
 msgstr "Is niet nodig als je inmiddels Google Analytics code ingevoerd hebt"
 
-#: ../includes/components/settings.php:445
+#: ../includes/components/settings.php:458
+msgid "Google Analytics code"
+msgstr "Google Analytics code"
+
+#: ../includes/components/settings.php:462
 msgid "Add code"
 msgstr "Code toevoegen"
 
-#: ../includes/components/settings.php:457
+#: ../includes/components/settings.php:474
 #, php-format
 msgid "Looks like: %s (where to get it: %s)."
-msgstr "Ziet er uit als: %s (waar te krijgen: %s)."
+msgstr "Lijkt op: %s (waar te krijgen: %s)."
 
-#: ../templates/_form-general.tpl.php:72
+#: ../includes/components/settings.php:482
+msgid "JavaScript code for execution after the form submission"
+msgstr "Javascript code die uitgevoerd wordt na indienen formulier"
+
+#: ../includes/components/settings.php:485
+msgid "To integrate with other analytic / conversion tracking systems, etc."
+msgstr "Voor integratie met andere analytic / conversie tracking systemen, etc."
+
+#: ../templates/_form-general.tpl.php:17
 msgid "Error"
 msgstr "Fout"
 
-#: ../templates/admin/help.tpl.php:28
+#: ../templates/admin/help.tpl.php:16
+msgid "Thank you very much in advance!"
+msgstr "Op voorhand hartelijk bedankt!"
+
+#: ../templates/admin/help.tpl.php:40
 msgid "There are three ways to use Popup4Phone plugin"
 msgstr "Er zijn drie manieren om Popup4Phone plugin te gebruiken"
 
-#: ../templates/admin/help.tpl.php:30
-msgid "Auto popup with some delay after loading of the page"
-msgstr "Automatische popup met wat vertraging na laden van de pagina"
-
-#: ../templates/admin/help.tpl.php:31
-msgid "Popover button, where the user can click and open the form"
-msgstr "Popover knop, waarop bezoekers kunnen klikken om formulier te openen "
-
-#: ../templates/admin/help.tpl.php:32
+#: ../templates/admin/help.tpl.php:44
 msgid "Shortcode/inline form"
 msgstr "Shortcode/inline formulier"
 
-#: ../templates/admin/help.tpl.php:35
+#: ../templates/admin/help.tpl.php:47
 msgid "Shortcodes"
 msgstr "Shortcodes"
 
-#: ../templates/admin/help.tpl.php:37
+#: ../templates/admin/help.tpl.php:49
 msgid "show inline form and lock auto popup form"
 msgstr "toon inline formulier en sluit het automatische popup formulier af"
 
-#: ../templates/admin/help.tpl.php:38
+#: ../templates/admin/help.tpl.php:50
 msgid "show inline form, NOT lock auto popup form"
 msgstr "toon inline formulier en sluit het automatische popup formulier NIET af"
 
-#: ../templates/admin/help.tpl.php:41
-msgid ""
-"Also I recommend to use some trigger email service (like Mandrill) for a "
-"better deliverability"
-msgstr ""
-"Ook adviseer ik om een trigger e-mailservice (zoals Mandrill) te gebruiken "
-"voor betere aflevering"
-
-#: ../templates/admin/help.tpl.php:41
-msgid "plugin"
-msgstr "plugin"
-
-#: ../templates/admin/help.tpl.php:41
-msgid "this is not my plugin, the link is provided just for reference"
-msgstr "dit is niet mijn plugin, de link wordt ter informatie aangeboden"
-
-#: ../templates/admin/help.tpl.php:43
+#: ../templates/admin/help.tpl.php:60
 msgid "Subscribe to mailing list and get priority support"
 msgstr "Abonneer je voor de nieuwsbrief en krijg met voorrang support"
 
-#: ../templates/admin/help.tpl.php:69
+#: ../templates/admin/help.tpl.php:86
 msgid "Subscribe"
 msgstr "Abonneren"
 
-#: ../templates/admin/tbl.tpl.php:11
+#: ../templates/admin/integrations.tpl.php:6
+msgid ""
+"Do you want to integrate this plugin with another system (helpdesk, CRM, etc."
+")?"
+msgstr "Wil je deze plugin integreren met andere systemen (helpdesk, CRM, etc.)?"
+
+#: ../templates/admin/integrations.tpl.php:7
+#, php-format
+msgid "You can order it here: %s"
+msgstr "Je kunt het hier bestellen: %s"
+
+#: ../templates/admin/tbl.tpl.php:13
 msgid "Export in CSV"
 msgstr "Exporteer in CSV"
