@@ -61,6 +61,7 @@ Comparing to other popup plugins, this plugin don't require using of email addre
 * Immediate connection (callback) between your phone and phone specified by user. It will use integation with cloud communications system / PBX
 * Export leads in Excel (.XLS/.XLSX) formats
 * Comments to leads
+* Ability to integrate as Javascript code to other sites/domains (including non-WordPress)
 * Something you want, but was not specified here?
 
 
