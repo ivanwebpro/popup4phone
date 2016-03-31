@@ -11,14 +11,14 @@
 
 .popup4phone label {
     display: inline-block;
-    max-width: 100%;
+    max-width: 90%;
     margin-bottom: 5px;
     font-weight: bold;
 }
 
 .popup4phone .form-control {
   display: block;
-  width: 100%;
+  width: 90%;
   height: 34px;
 	margin: 0px;
   padding: 6px 12px;

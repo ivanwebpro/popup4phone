@@ -4,19 +4,9 @@ include dirname( dirname( __FILE__ ) ) . '/code/_safe.php';
 
 // Leads table, "view" in admin panel + export for csv
 
-if ( !class_exists( 'WP_Screen' ) )
-{
-	require_once( ABSPATH . 'wp-admin/includes/screen.php' );
-}
-
-require_once( ABSPATH . 'wp-admin/includes/template.php' );
-if ( !class_exists( 'WP_List_Table' ) )
-{
-	require_once( ABSPATH . 'wp-admin/includes/class-wp-list-table.php' );
-}
 
 
-class Popup4Phone_Leads_Table extends WP_List_Table
+class Popup4Phone_Leads_Table extends Popup4Phone_List_Table
 {
 	public $owner;
 	public $plugin_id;

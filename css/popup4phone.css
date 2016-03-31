@@ -115,4 +115,6 @@
 .popup4phone .form-control
 {
 	box-sizing: border-box;
+  -webkit-box-sizing: content-box;
+     -moz-box-sizing: content-box;
 }

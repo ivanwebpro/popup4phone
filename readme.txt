@@ -25,6 +25,7 @@ Visitor of your site will see popup form (shown automatically or by click to pop
 Comparing to other popup plugins, this plugin don't require using of email address field and allow to make leads database inside WordPress without any 3rd party services.
 
 **Shortcodes:**
+
 * [popup4phone_inline_form_no_popup] - inline form, lock auto popup
 * [popup4phone_inline_form] - inline form, NOT lock auto popup
 * [popup4phone_button_inline] - inline button for open form
@@ -38,6 +39,7 @@ Comparing to other popup plugins, this plugin don't require using of email addre
 * Settings for popover button (offset, size, color)
 * Automatic popup (can be disabled). Available settings for automatic popup: delay after load page and length of pause between repeat shows for same visitor
 * Integration with Google Analytics so you can track what ads causes calls requests and improve your marketing
+* Support for conversion tags (e.g. Google Conversion / remarketing), tracking pixels
 * You will know about new leads immediately by email
 * Leads will be saved with traffic/behavior data - where lead come from (referrer), landing page, UTM labels, URL and title of page where form was submitted, visited pages on your site
 * Shortcode for inline form - just insert [popup4phone_inline_form] in any page or post
@@ -45,15 +47,17 @@ Comparing to other popup plugins, this plugin don't require using of email addre
 * You can specify custom javascript code for execute after submit (for integrate with other analytics / conversion tracking systems, etc.)
 
 
-> ** Premium version advantages (http://popup4phone.com/premium/) **
-> * Custom title per page (loaded from tag with some CSS selector specified in settings, e.g. &quot;.popup4phone-custom-title&quot;). For example, you have page about product A. You can add hidden block:<br><i> &lt;div class = 'popup4phone-custom-title'&gt;Do you have any questions about the product A?&lt;/div&gt;</i><br>And content of this block will be used as title<
-> * Open popup dialog on the end of page scrolling
-> * Custom CSS
-> * Disable popup if element with some CSS selector (specified in settings too) present on the page. For example, if you want to hide Popup4Phone on WooCommerce checkout pages you can specify &quot;.form[name=checkout], .woocommerce-thankyou-order-received&quot; and Popup4Phone will not appear on these pages
-> * Spam protection
-> * Settings for auto show popup only once per IP
-> * Open on click to any specified element by CSS selector. For example, dialog can be openeed by click by any element with class popup4phone-click-to-open
-> Click to order: http://popup4phone.com/premium/ 
+**Premium version advantages: **
+
+* Custom title per page (loaded from tag with some CSS selector specified in settings, e.g. &quot;.popup4phone-custom-title&quot;). For example, you have page about product A. You can add hidden block:<br><i> &lt;div class = 'popup4phone-custom-title'&gt;Do you have any questions about the product A?&lt;/div&gt;</i><br>And content of this block will be used as title<
+* Open popup dialog on the end of page scrolling
+* Custom CSS
+* Disable popup if element with some CSS selector (specified in settings too) present on the page. For example, if you want to hide Popup4Phone on WooCommerce checkout pages you can specify &quot;.form[name=checkout], .woocommerce-thankyou-order-received&quot; and Popup4Phone will not appear on these pages
+* Spam protection
+* Settings for auto show popup only once per IP
+* Open on click to any specified element by CSS selector. For example, dialog can be openeed by click by any element with class popup4phone-click-to-open
+* **Click to order:** http://popup4phone.com/premium/
+
 
 **Planned features (not implemented yet, please let me know if you interested in it)**
 
@@ -89,15 +93,21 @@ Comparing to other popup plugins, this plugin don't require using of email addre
 
 == Changelog ==
 
+= 1.2.2 =
+* fix for WP_List_Table inclusion / error messages
+
+= 1.2.1 =
+* fix styles for cross-browser compatibility
+
 = 1.2.0 =
-- popover icon by SVG image
-- responsive popup form on mobile screens
-- added ability to use caption instead icon for popover button (including text/font-size settings)
-- shortcode for inline insertion callback button
-- multiple emails for notifications separated by comma
-- filters / actions / js-events for customization
-- fix version saving / dbDelta updates
-- remove H2 tag from dialog title to avoid SEO problems
+* popover icon by SVG image
+* responsive popup form on mobile screens
+* added ability to use caption instead icon for popover button (including text/font-size settings)
+* shortcode for inline insertion callback button
+* multiple emails for notifications separated by comma
+* filters / actions / js-events for customization
+* fix version saving / dbDelta updates
+* remove H2 tag from dialog title to avoid SEO problems
 
 = 1.1.0 =
 * added Dutch (Nederlands translation)
