@@ -93,6 +93,9 @@ Comparing to other popup plugins, this plugin don't require using of email addre
 
 == Changelog ==
 
+= 1.2.3 =
+* fix leads table errors
+
 = 1.2.2 =
 * fix for WP_List_Table inclusion / error messages
 

@@ -3,6 +3,13 @@
 // autoload - TODO cache file structure on first load
 function popup4phone_autoload( $class )
 {
+	/*if (stristr($class, 'table') && stristr($class, 'popup4phone'))
+	{
+		print $class."<hr>";
+  	xdebug_print_function_stack();
+		exit;
+	} */
+
 	$class = strtolower( $class );
 	$class = str_replace( '_', '-', $class );
   $class2 = str_replace( "popup4phone-", '', $class );

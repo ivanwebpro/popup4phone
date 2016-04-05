@@ -1,13 +1,5 @@
 <?php
 
-if ( !class_exists( 'WP_Screen', false ) )
-{
-	require_once( ABSPATH . 'wp-admin/includes/class-wp-screen.php' );
-	require_once( ABSPATH . 'wp-admin/includes/screen.php' );
-}
-
-require_once( ABSPATH . 'wp-admin/includes/template.php' );
-
 
 /**
  * Administration API: WP_List_Table class
@@ -53,15 +45,6 @@ class Popup4Phone_List_Table {
 	protected $_pagination_args = array();
 
 	/**
-	 * The current screen.
-	 *
-	 * @since 3.1.0
-	 * @access protected
-	 * @var object
-	 */
-	protected $screen;
-
-	/**
 	 * Cached bulk actions.
 	 *
 	 * @since 3.1.0
@@ -103,7 +86,7 @@ class Popup4Phone_List_Table {
 	 * @access protected
 	 * @var array
 	 */
-	protected $compat_fields = array( '_args', '_pagination_args', 'screen', '_actions', '_pagination' );
+	protected $compat_fields = array( '_args', '_pagination_args', '_actions', '_pagination' );
 
 	/**
 	 * {@internal Missing Summary}
@@ -137,25 +120,17 @@ class Popup4Phone_List_Table {
 	 *                            and sorting data, for example. If true, the class will call
 	 *                            the {@see _js_vars()} method in the footer to provide variables
 	 *                            to any scripts handling AJAX events. Default false.
-	 *     @type string $screen   String containing the hook name used to determine the current
-	 *                            screen. If left null, the current screen will be automatically set.
 	 *                            Default null.
 	 * }
 	 */
-	public function __construct( $args = array() ) {
+	public function __construct( $args = array() )
+	{
 		$args = wp_parse_args( $args, array(
 			'plural' => '',
 			'singular' => '',
 			'ajax' => false,
 			'screen' => null,
 		) );
-
-		$this->screen = convert_to_screen( $args['screen'] );
-
-		add_filter( "manage_{$this->screen->id}_columns", array( $this, 'get_columns' ), 0 );
-
-		if ( !$args['plural'] )
-			$args['plural'] = $this->screen->base;
 
 		$args['plural'] = sanitize_key( $args['plural'] );
 		$args['singular'] = sanitize_key( $args['singular'] );
@@ -397,22 +372,9 @@ class Popup4Phone_List_Table {
 	 */
 	public function views() {
 		$views = $this->get_views();
-		/**
-		 * Filter the list of available list table views.
-		 *
-		 * The dynamic portion of the hook name, `$this->screen->id`, refers
-		 * to the ID of the current screen, usually a string.
-		 *
-		 * @since 3.5.0
-		 *
-		 * @param array $views An array of available list table views.
-		 */
-		$views = apply_filters( "views_{$this->screen->id}", $views );
 
 		if ( empty( $views ) )
 			return;
-
-		$this->screen->render_screen_reader_content( 'heading_views' );
 
 		echo "<ul class='subsubsub'>\n";
 		foreach ( $views as $class => $view ) {
@@ -450,7 +412,7 @@ class Popup4Phone_List_Table {
 			/**
 			 * Filter the list table Bulk Actions drop-down.
 			 *
-			 * The dynamic portion of the hook name, `$this->screen->id`, refers
+			 * The dynamic portion of the hook name, `$this->scr->id`, refers
 			 * to the ID of the current screen, usually a string.
 			 *
 			 * This filter can currently only be used to remove bulk actions.
@@ -459,7 +421,6 @@ class Popup4Phone_List_Table {
 			 *
 			 * @param array $actions An array of the available bulk actions.
 			 */
-			$this->_actions = apply_filters( "bulk_actions-{$this->screen->id}", $this->_actions );
 			$this->_actions = array_intersect_assoc( $this->_actions, $no_new_actions );
 			$two = '';
 		} else {
@@ -766,9 +727,6 @@ class Popup4Phone_List_Table {
 			$infinite_scroll = $this->_pagination_args['infinite_scroll'];
 		}
 
-		if ( 'top' === $which && $total_pages > 1 ) {
-			$this->screen->render_screen_reader_content( 'heading_pagination' );
-		}
 
 		$output = '<span class="displaying-num">' . sprintf( _n( '%s item', '%s items', $total_items ), number_format_i18n( $total_items ) ) . '</span>';
 
@@ -951,15 +909,11 @@ class Popup4Phone_List_Table {
 	 * @return string The name of the primary column.
 	 */
 	protected function get_primary_column_name() {
-		$columns = get_column_headers( $this->screen );
+		$columns = array();
 		$default = $this->get_default_primary_column_name();
 
 		// If the primary column doesn't exist fall back to the
 		// first non-checkbox column.
-		if ( ! isset( $columns[ $default ] ) ) {
-			$default = WP_List_Table::get_default_primary_column_name();
-		}
-
 		/**
 		 * Filter the name of the primary column for the current list table.
 		 *
@@ -968,7 +922,7 @@ class Popup4Phone_List_Table {
 		 * @param string $default Column name default for the specific list table, e.g. 'name'.
 		 * @param string $context Screen ID for specific list table, e.g. 'plugins'.
 		 */
-		$column  = apply_filters( 'list_table_primary_column', $default, $this->screen->id );
+		$column  = $default;
 
 		if ( empty( $column ) || ! isset( $columns[ $column ] ) ) {
 			$column = $default;
@@ -998,21 +952,21 @@ class Popup4Phone_List_Table {
 			return $column_headers;
 		}
 
-		$columns = get_column_headers( $this->screen );
-		$hidden = get_hidden_columns( $this->screen );
+		$columns = array();
+		$hidden = array();
 
 		$sortable_columns = $this->get_sortable_columns();
 		/**
 		 * Filter the list table sortable columns for a specific screen.
 		 *
-		 * The dynamic portion of the hook name, `$this->screen->id`, refers
+		 * The dynamic portion of the hook name, `$this->scr->id`, refers
 		 * to the ID of the current screen, usually a string.
 		 *
 		 * @since 3.5.0
 		 *
 		 * @param array $sortable_columns An array of sortable columns.
 		 */
-		$_sortable = apply_filters( "manage_{$this->screen->id}_sortable_columns", $sortable_columns );
+		$_sortable = $sortable_columns;
 
 		$sortable = array();
 		foreach ( $_sortable as $id => $data ) {
@@ -1135,7 +1089,6 @@ class Popup4Phone_List_Table {
 
 		$this->display_tablenav( 'top' );
 
-		$this->screen->render_screen_reader_content( 'heading_list' );
 ?>
 <table class="wp-list-table <?php echo implode( ' ', $this->get_table_classes() ); ?>">
 	<thead>
@@ -1376,10 +1329,6 @@ class Popup4Phone_List_Table {
 	public function _js_vars() {
 		$args = array(
 			'class'  => get_class( $this ),
-			'screen' => array(
-				'id'   => $this->screen->id,
-				'base' => $this->screen->base,
-			)
 		);
 
 		printf( "<script type='text/javascript'>list_args = %s;</script>\n", wp_json_encode( $args ) );

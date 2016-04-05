@@ -4,7 +4,7 @@
 Plugin Name: Popup4Phone
 Plugin URI: http://popup4phone.com
 Description: Popover/popup dialog for collecting the user`s phone numbers
-Version: 1.2.2
+Version: 1.2.3
 Author: Ivan Skorodumov
 Author URI: http://popup4phone.com/author
 Developer: Ivan Skorodumov
@@ -18,7 +18,7 @@ License URI: http://www.gnu.org/licenses/gpl-3.0.html
 */
 
 $cfg = array(
-	'version' => '1.2.2',
+	'version' => '1.2.3',
 	'id'      => 'popup4phone',
 	'file'    => plugin_basename( __FILE__ ),
 	'name'    => "Popup4Phone",

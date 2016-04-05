@@ -7,7 +7,6 @@ include dirname( dirname( __FILE__ ) ) . '/code/_safe.php';
 class Popup4Phone_Leads extends Popup4Phone_Component
 {
 	public $tbl = 'popup4phone_leads';
-	public $table;
 
 	public function __construct()
 	{
@@ -38,7 +37,7 @@ class Popup4Phone_Leads extends Popup4Phone_Component
 	public function page_leads()
 	{
 		$title   = 'Popup4Phone: '.__( 'Leads', 'popup4phone' );
-		$table   = $this->table;
+		$table   = $this->table();
 		$url_csv = $this->url_add_params( array(
 			 $this->plugin_id . "_export_csv" => 1
 		) );
@@ -134,7 +133,7 @@ class Popup4Phone_Leads extends Popup4Phone_Component
 
 	function page_csv()
 	{
-		$leads = $this->table->items_csv();
+		$leads = $this->table()->items_csv();
 		$this->download_send_headers( $this->export_file_name( ".csv" ) );
 		echo $this->array_to_csv( $leads, $use_keys_as_headers = false );
 	}
@@ -181,7 +180,7 @@ class Popup4Phone_Leads extends Popup4Phone_Component
 	{
 		$lead = $this->lead_get( $id );
 
-		$flds = $this->table->get_columns();
+		$flds = $this->table()->get_columns();
 		unset( $flds['cb'] );
 		unset( $flds['web_stat'] );
 		$flds = array_merge( $flds, $this->web_stat_fields() );
@@ -290,16 +289,13 @@ class Popup4Phone_Leads extends Popup4Phone_Component
 		$_SESSION[ $id ] = $s;
 	}
 
-	public function table_init()
+	public function table()
 	{
-		if (!isset($this->table))
-		{
-			$t            = new Popup4Phone_Leads_Table();
-			$t->owner     = $this;
-			$t->tbl       = $this->tbl;
-			$t->plugin_id = $this->plugin_id;
-			$this->table  = $t;
-		}
+		$t            = new Popup4Phone_Leads_Table();
+		$t->owner     = $this;
+		$t->tbl       = $this->tbl;
+		$t->plugin_id = $this->plugin_id;
+		return $t;
 	}
 
 	public function action_admin_init()
@@ -307,25 +303,10 @@ class Popup4Phone_Leads extends Popup4Phone_Component
 		if (!isset($_GET['page']) || !stristr($_GET['page'], $this->plugin_id))
 			return;
 
-		if ( current_user_can( 'manage_options' )  && is_admin() )
-		{
-			$this->table_init();
-			$this->table->process_actions();
-		}
-	}
-
-	public function action_plugins_loaded()
-	{
-		if (!isset($_GET['page']) || !stristr($_GET['page'], $this->plugin_id))
-			return;
-
-	
-		if ( !current_user_can( 'manage_options' )  || !is_admin() )
+		if (!current_user_can( 'manage_options' )  || !is_admin())
 		{
 			return;
 		}
-
-		$this->table_init();
 
 		$id     = $this->plugin_id;
 		$ecsv_p = $id . "_export_csv";
@@ -342,6 +323,9 @@ class Popup4Phone_Leads extends Popup4Phone_Component
 			$this->page_web_stat( $ws_id );
 			exit;
 		}
+
+		$this->table()->process_actions();
+
 	}
 
 	public function install()
