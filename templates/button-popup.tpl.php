@@ -15,10 +15,12 @@ $c_ph = $this->opt('popover_button_phone_handset_color');
 $c_bg = $this->opt('popover_button_background_color');
 $use_caption = $this->opt('popup_button_caption_enabled');
 $c_class = "popup4phone-popover-button";
+$custom_icon = apply_filters(Popup4Phone_Filters::BUTTON_CUSTOM_ICON, '');
+
 if (!empty($inline))
 	$c_class = " popup4phone-popover-button-inline";
 
-if (!$use_caption)
+if (!$use_caption && !$custom_icon)
 	$c_class .= " popup4phone-popover-button-icon";
 
 
@@ -63,15 +65,26 @@ if (!$use_caption)
 {
 	fill: <?php echo $c_ph;?>;
 }
+
+.popup4phone-popover-button-animation-wrapper
+{
+	position: relative;
+}
+
 </style>
 <div class='popup4phone'>
 	<div class='<?php echo $c_class?>'>
+	<div class='popup4phone-popover-button-animation-wrapper'>
 		<?php
 			if ($use_caption)
 			{
 				echo "<div class = 'popup4phone-popover-button-caption'>";
         echo $this->opt('popup_button_caption');
 				echo "</div>";
+			}
+			else if ($custom_icon)
+			{
+				echo $custom_icon;
 			}
       else
 			{
@@ -80,5 +93,6 @@ if (!$use_caption)
 				echo "</div>";
 			}
 		?>
+	</div>
 	</div>
 </div>

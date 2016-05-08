@@ -118,6 +118,11 @@ class Popup4Phone_Leads extends Popup4Phone_Component
 			else
 				$emails = array($to);
 
+			$body .= apply_filters(
+									Popup4Phone_Filters::EMAIL_NEW_LEAD_FOOTER, '');
+			$body = apply_filters(
+									Popup4Phone_Filters::EMAIL_NEW_LEAD_BEFORE_SEND, $body);
+
 			foreach($emails as $to)
 			{
 				wp_mail( $to, $subject, $body, $headers );

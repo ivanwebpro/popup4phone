@@ -6,21 +6,12 @@ include dirname( dirname( __FILE__ ) ) . '/code/_safe.php';
 
 class Popup4Phone_Settings extends Popup4Phone_Settings_Base
 {
-	public function filter_plugin_action_links( $links )
+	public function filter_plugin_action_links_xbasenamex($links)
 	{
 		$url           = $this->url_settings();
 		$settings_link = "<a href='$url'>Settings</a>";
 		array_unshift( $links, $settings_link );
 		return $links;
-	}
-
-	public function hook()
-	{
-		parent::hook();
-		add_filter( "plugin_action_links_$this->plugin_file", array(
-			 &$this,
-			'filter_plugin_action_links'
-		) );
 	}
 
 	public function action_admin_enqueue_scripts()

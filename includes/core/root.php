@@ -10,6 +10,7 @@ abstract class Popup4Phone_Root
 	public $plugin_id;
 	public $plugin_id_;
 	public $plugin_name;
+	public $plugin_basename;
 	public $plugin_version;
 	public $plugin_file;
 	public $plugin_url;

@@ -4,6 +4,8 @@ jQuery(document).ready(function()
 {
 	var $ = jQuery;
 
+	$(document).trigger( "popup4phone-init-pre" );
+
 	function getNextZIndex()
 	{
 		var index_highest = 10;
@@ -21,15 +23,17 @@ jQuery(document).ready(function()
 
 	$('.popup4phone-popover-button').css('z-index', getNextZIndex()+20);
 
-
+  $(document).trigger( "popup4phone-init-settings-start" );
 	var popup4phone = {};
 	popup4phone.enabled = true;
+	popup4phone.popover_button_can_show = true;
 	popup4phone.selector = '.popup4phone-form-popup';
 	popup4phone.dlg = $(popup4phone.selector);
 	popup4phone.fade = $('.popup4phone-fade');
 	popup4phone.displaying = false;
-
 	popup4phone.settings = popup4phone_settings;
+
+	$(document).trigger( "popup4phone-init-settings-end" );
 
 	popup4phone.dlg2 = function ()
 	{
@@ -326,6 +330,46 @@ jQuery(document).ready(function()
   	}
 	};
 
+	popup4phone.runShowButton = function ()
+	{
+		$(document).trigger( "popup4phone-popover-button-show-before" );
+
+		//console.log(this);
+		if (!this.popover_button_can_show)
+			return;
+
+	  $('.popup4phone-popover-button').fadeIn(2000, function()
+		{
+			if (popup4phone_settings.popup_button_animation_bounce)
+			{
+				animateButton();
+			}
+
+			function animateButton()
+			{
+				var s = 100;
+				var a = 5;
+				var b = 20;
+				var e = "easeInBounce";
+				/*$('.popup4phone-popover-button .wrapper')
+					.stop(true,true)
+					.animate({"top": a}, s, e).animate({"top": -a}, s, e)
+					.animate({"top": a}, s, e).animate({"top": -a}, s, e)
+					;*/
+
+				$('.popup4phone-popover-button-animation-wrapper')
+					.stop(true,true)
+					.animate({"bottom": a}, s, e).animate({"bottom": 0}, s, e)
+					.animate({"bottom": a}, s, e).animate({"bottom": 0}, s, e)
+					;
+				setTimeout(animateButton, 10*1000);
+			};
+
+		});
+	};
+
+	$(document).trigger( "popup4phone-init-launch-start" );
+
 	popup4phone.init();
 	$(window).resize(function() {popup4phone.center(); });
 	popup4phone.center();
@@ -343,28 +387,17 @@ jQuery(document).ready(function()
 		popup4phone.hideDlg();
 	});
 
-
-  $('.popup4phone-popover-button').fadeIn(2000, function()
+	if (popup4phone_settings.button_delay_for_show)
 	{
-		if (popup4phone_settings.popup_button_animation_bounce)
-		{
-			animateButton();
-		}
+		//console.log("Button delay detected: " + (popup4phone_settings.button_delay_for_show*1000));
 
-		function animateButton()
-		{
-			var s = 100;
-			var a = 5;
-			var b = 20;
-			var e = "easeInBounce";
-			$('.popup4phone-popover-button .wrapper')
-				.stop(true,true)
-				.animate({"top": a}, s, e).animate({"top": -a}, s, e)
-				.animate({"top": a}, s, e).animate({"top": -a}, s, e)
-				;
-			setTimeout(animateButton, 10*1000);
-		};
+		setTimeout(function(){ popup4phone.runShowButton()}, popup4phone_settings.button_delay_for_show*1000);
+	}
+	else
+	{
+  	popup4phone.runShowButton();
+	}
 
-	});
+	$(document).trigger( "popup4phone-init-launch-end" );
 
 });

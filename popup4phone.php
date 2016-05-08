@@ -4,7 +4,7 @@
 Plugin Name: Popup4Phone
 Plugin URI: http://popup4phone.com
 Description: Popover/popup dialog for collecting the user`s phone numbers
-Version: 1.2.3
+Version: 1.2.4
 Author: Ivan Skorodumov
 Author URI: http://popup4phone.com/author
 Developer: Ivan Skorodumov
@@ -18,11 +18,12 @@ License URI: http://www.gnu.org/licenses/gpl-3.0.html
 */
 
 $cfg = array(
-	'version' => '1.2.3',
+	'version' => '1.2.4',
 	'id'      => 'popup4phone',
 	'file'    => plugin_basename( __FILE__ ),
 	'name'    => "Popup4Phone",
 	'url'     => "http://popup4phone.com/",
+	'basename' => plugin_basename(__FILE__),
 );
 
 define("POPUP4PHONE_CFG", json_encode($cfg));
@@ -37,6 +38,10 @@ class Popup4Phone_Filters
 	const FORM_SUBMIT_BEFORE_SAVE = 'popup4phone_form_submit_before_save';
 	const FORM_SUBMIT_AFTER_SAVE = 'popup4phone_form_submit_after_save';
 	const FORM_POST_REQUEST_VALIDATE = 'popup4phone_form_post_request_validate';
+	const BUTTON_CUSTOM_ICON_URL = 'popup4phone_button_custom_icon_url';
+	const BUTTON_CUSTOM_ICON = 'popup4phone_button_custom_icon';
+	const EMAIL_NEW_LEAD_BEFORE_SEND = 'popup4phone_email_new_lead_before_send';
+	const EMAIL_NEW_LEAD_FOOTER = 'popup4phone_email_new_lead_footer';
 };
 
 class Popup4Phone_Actions
@@ -50,3 +55,4 @@ class Popup4Phone_Actions
 include 'includes/_autoload.php';
 
 new Popup4Phone_Main();
+

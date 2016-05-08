@@ -3,7 +3,7 @@ include 'code/_safe.php';
 
 // Top-level main class for plugin
 
-class Popup4Phone_Main extends Popup4Phone_Root
+class Popup4Phone_Main extends Popup4Phone_Main_Base
 {
 	public $settings;
 
@@ -11,67 +11,6 @@ class Popup4Phone_Main extends Popup4Phone_Root
 	{
 		return dirname( dirname( __FILE__ ) );
 	}
-
-	public function filter_plugin_action_links( $links )
-	{
-		$url = $this->url_help();
-		$a = "<a href='$url'>Help</a>";
-		array_unshift( $links, $a );
-		return $links;
-	}
-
-	public function __construct()
-	{
-		parent::__construct();
-    $this->settings = new Popup4Phone_Settings;
-
-		static $hooked = false;
-		if ( !$hooked )
-		{
-			add_action( 'plugins_loaded', array( &$this, 'action_plugins_loaded' ) );
-			add_action( 'admin_menu', array( &$this, 'admin_menu' ) );
-			add_action( 'admin_notices', array( &$this, 'admin_notices' ) );
-
-			$n = new Popup4Phone_Notices_Admin();
-			$n->init();
-
-		}
-
-		$cs = $this->components();
-		$cs[] = $this;
-		$ms = array(
-			'admin_init',
-			'init',
-			'admin_enqueue_scripts',
-			'plugins_loaded',
-			'wp_loaded',
-			'wp',
-			'parse_request',
-		);
-		$run_install = $this->version_is_requires_updating();
-
-		foreach( $cs as $c )
-		{
-			$c->hook();
-
-			if ( $run_install )
-			{
-				$c->install();
-			}
-
-			foreach( $ms as $m )
-			{
-				$f = 'action_'.$m;
-      	if ( method_exists( $c, $f ) )
-				{
-					add_action( $m, array( $c, $f ) );
-				}
-			}
-		}
-
-		$this->version_mark_updated();
-	}
-
 
 	public function action_plugins_loaded()
 	{
@@ -88,8 +27,6 @@ class Popup4Phone_Main extends Popup4Phone_Root
 	{
     include $this->tpl_path( 'templates/admin/integrations.tpl.php' );
 	}
-
-
 
 	public function components()
 	{
@@ -113,7 +50,7 @@ class Popup4Phone_Main extends Popup4Phone_Root
 		return $res;
 	}
 
-	public function admin_menu()
+	public function action_admin_menu()
 	{
 		$title = "Popup4Phone";
 		$menu = 'Popup4Phone';

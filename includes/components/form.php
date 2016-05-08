@@ -10,15 +10,6 @@ class Popup4Phone_Form extends Popup4Phone_Component
 
 	public function hook()
 	{
-		add_action( 'wp_enqueue_scripts', array(
-			 &$this,
-			'wp_enqueue_scripts'
-		) );
-		add_action( 'wp_footer', array(
-			 &$this,
-			'wp_footer'
-		) );
-
 		$id = $this->plugin_id;
 		add_shortcode( $id . '_inline_form', array(
 			 &$this,
@@ -35,7 +26,7 @@ class Popup4Phone_Form extends Popup4Phone_Component
 		) );
 	}
 
-	public function wp_enqueue_scripts()
+	public function action_wp_enqueue_scripts()
 	{
 		$v  = $this->plugin_version;
 		$id = $this->plugin_id;
@@ -76,7 +67,7 @@ class Popup4Phone_Form extends Popup4Phone_Component
 		return ob_get_clean();
 	}
 
-	public function wp_footer()
+	public function action_wp_footer()
 	{
 		do_action(Popup4Phone_Actions::FOOTER_BEFORE);
 
@@ -162,6 +153,8 @@ class Popup4Phone_Form extends Popup4Phone_Component
 		}
 
 		$id = $this->plugin_id;
+		ob_start();
 		include $this->tpl_path( 'templates/form-inline.tpl.php' );
+		return ob_get_clean();
 	}
 }
