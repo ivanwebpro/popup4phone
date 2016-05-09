@@ -221,7 +221,7 @@ class Popup4Phone_Settings extends Popup4Phone_Settings_Base
 
 		$opts[$k]['settings']['title']  = array(
 			'name' => __( 'Title', 'popup4phone' ),
-			'default' => __( "Can't find something you want?", 'popup4phone' ),
+			'default' => __( "Any questions?", 'popup4phone' ),
 			'type' => 'textarea',
 			'comment' =>
 			"<div class='popup4phone_list_pointed'>" .

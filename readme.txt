@@ -93,12 +93,10 @@ Comparing to other popup plugins, this plugin don't require using of email addre
 
 == Changelog ==
 
-= 1.2.5 =
+= 1.2.4 =
 * fix wrong output of shortcodes
 * new hooks for extensions
-
-= 1.2.4 =
-* fix error on page for plugins list
+* fix tracking visited pages
 
 = 1.2.3 =
 * fix leads table errors

@@ -11,16 +11,17 @@ class Popup4Phone_Leads extends Popup4Phone_Component
 	public function __construct()
 	{
 		parent::__construct();
-		$this->track();
-	}
 
-	public function init()
-	{
 		// don't track admin pages
 		if (!is_admin() && !session_id() )
 		{
 			session_start();
 		}
+	}
+
+	public function action_init()
+	{
+    $this->track();
 	}
 
 	public function cfg_menus()
@@ -282,7 +283,8 @@ class Popup4Phone_Leads extends Popup4Phone_Component
 		}
 
 		$url = $_SERVER['REQUEST_URI'];
-		if (!strstr($url, 'wp-admin/admin-ajax.php'))
+		if (!strstr($url, 'wp-admin/admin-ajax.php')
+					&& !strstr($url, 'wc-ajax='))
 		{
 			$ws[ $k ][] = array(
 				'url' => $url,
@@ -292,6 +294,8 @@ class Popup4Phone_Leads extends Popup4Phone_Component
 
 		$s['web_stat'] = $ws;
 		$_SESSION[ $id ] = $s;
+
+		//$this->hr($_SESSION);
 	}
 
 	public function table()

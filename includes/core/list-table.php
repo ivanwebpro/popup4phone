@@ -1,6 +1,6 @@
 <?php
 
-
+// LOCO_TRANSLATION_EXCLUDE
 /**
  * Administration API: WP_List_Table class
  *
@@ -144,8 +144,8 @@ class Popup4Phone_List_Table {
 
 		if ( empty( $this->modes ) ) {
 			$this->modes = array(
-				'list'    => __( 'List View' ),
-				'excerpt' => __( 'Excerpt View' )
+				'list'    => __( 'List View', 'default' ),
+				'excerpt' => __( 'Excerpt View', 'default' )
 			);
 		}
 	}
@@ -430,9 +430,9 @@ class Popup4Phone_List_Table {
 		if ( empty( $this->_actions ) )
 			return;
 
-		echo '<label for="bulk-action-selector-' . esc_attr( $which ) . '" class="screen-reader-text">' . __( 'Select bulk action' ) . '</label>';
+		echo '<label for="bulk-action-selector-' . esc_attr( $which ) . '" class="screen-reader-text">' . __( 'Select bulk action', 'default' ) . '</label>';
 		echo '<select name="action' . $two . '" id="bulk-action-selector-' . esc_attr( $which ) . "\">\n";
-		echo '<option value="-1">' . __( 'Bulk Actions' ) . "</option>\n";
+		echo '<option value="-1">' . __( 'Bulk Actions', 'default' ) . "</option>\n";
 
 		foreach ( $this->_actions as $name => $title ) {
 			$class = 'edit' === $name ? ' class="hide-if-no-js"' : '';
@@ -442,7 +442,7 @@ class Popup4Phone_List_Table {
 
 		echo "</select>\n";
 
-		submit_button( __( 'Apply' ), 'action', '', false, array( 'id' => "doaction$two" ) );
+		submit_button( __( 'Apply', 'default' ), 'action', '', false, array( 'id' => "doaction$two" ) );
 		echo "\n";
 	}
 
@@ -492,7 +492,7 @@ class Popup4Phone_List_Table {
 		}
 		$out .= '</div>';
 
-		$out .= '<button type="button" class="toggle-row"><span class="screen-reader-text">' . __( 'Show more details' ) . '</span></button>';
+		$out .= '<button type="button" class="toggle-row"><span class="screen-reader-text">' . __( 'Show more details', 'default' ) . '</span></button>';
 
 		return $out;
 	}
@@ -570,7 +570,7 @@ class Popup4Phone_List_Table {
 				selected( $m, $year . $month, false ),
 				esc_attr( $arc_row->year . $month ),
 				/* translators: 1: month name, 2: 4-digit year */
-				sprintf( __( '%1$s %2$d' ), $wp_locale->get_month( $month ), $year )
+				sprintf( __( '%1$s %2$d', 'default' ), $wp_locale->get_month( $month ), $year )
 			);
 		}
 ?>
@@ -629,7 +629,7 @@ class Popup4Phone_List_Table {
 		// No comments at all.
 		if ( ! $approved_comments && ! $pending_comments ) {
 			printf( '<span aria-hidden="true">—</span><span class="screen-reader-text">%s</span>',
-				__( 'No comments' )
+				__( 'No comments', 'default' )
 			);
 		// Approved comments have different display depending on some conditions.
 		} elseif ( $approved_comments ) {
@@ -641,7 +641,7 @@ class Popup4Phone_List_Table {
 		} else {
 			printf( '<span class="post-com-count post-com-count-no-comments"><span class="comment-count comment-count-no-comments" aria-hidden="true">%s</span><span class="screen-reader-text">%s</span></span>',
 				$approved_comments_number,
-				$pending_comments ? __( 'No approved comments' ) : __( 'No comments' )
+				$pending_comments ? __( 'No approved comments', 'default' ) : __( 'No comments', 'default' )
 			);
 		}
 
@@ -654,7 +654,7 @@ class Popup4Phone_List_Table {
 		} else {
 			printf( '<span class="post-com-count post-com-count-pending post-com-count-no-pending"><span class="comment-count comment-count-no-pending" aria-hidden="true">%s</span><span class="screen-reader-text">%s</span></span>',
 				$pending_comments_number,
-				$approved_comments ? __( 'No pending comments' ) : __( 'No comments' )
+				$approved_comments ? __( 'No pending comments', 'default' ) : __( 'No comments', 'default' )
 			);
 		}
 	}
@@ -763,7 +763,7 @@ class Popup4Phone_List_Table {
 		} else {
 			$page_links[] = sprintf( "<a class='first-page' href='%s'><span class='screen-reader-text'>%s</span><span aria-hidden='true'>%s</span></a>",
 				esc_url( remove_query_arg( 'paged', $current_url ) ),
-				__( 'First page' ),
+				__( 'First page', 'default' ),
 				'&laquo;'
 			);
 		}
@@ -773,17 +773,17 @@ class Popup4Phone_List_Table {
 		} else {
 			$page_links[] = sprintf( "<a class='prev-page' href='%s'><span class='screen-reader-text'>%s</span><span aria-hidden='true'>%s</span></a>",
 				esc_url( add_query_arg( 'paged', max( 1, $current-1 ), $current_url ) ),
-				__( 'Previous page' ),
+				__( 'Previous page', 'default' ),
 				'&lsaquo;'
 			);
 		}
 
 		if ( 'bottom' === $which ) {
 			$html_current_page  = $current;
-			$total_pages_before = '<span class="screen-reader-text">' . __( 'Current Page' ) . '</span><span id="table-paging" class="paging-input">';
+			$total_pages_before = '<span class="screen-reader-text">' . __( 'Current Page', 'default' ) . '</span><span id="table-paging" class="paging-input">';
 		} else {
 			$html_current_page = sprintf( "%s<input class='current-page' id='current-page-selector' type='text' name='paged' value='%s' size='%d' aria-describedby='table-paging' />",
-				'<label for="current-page-selector" class="screen-reader-text">' . __( 'Current Page' ) . '</label>',
+				'<label for="current-page-selector" class="screen-reader-text">' . __( 'Current Page', 'default' ) . '</label>',
 				$current,
 				strlen( $total_pages )
 			);
@@ -796,7 +796,7 @@ class Popup4Phone_List_Table {
 		} else {
 			$page_links[] = sprintf( "<a class='next-page' href='%s'><span class='screen-reader-text'>%s</span><span aria-hidden='true'>%s</span></a>",
 				esc_url( add_query_arg( 'paged', min( $total_pages, $current+1 ), $current_url ) ),
-				__( 'Next page' ),
+				__( 'Next page', 'default' ),
 				'&rsaquo;'
 			);
 		}
@@ -806,7 +806,7 @@ class Popup4Phone_List_Table {
 		} else {
 			$page_links[] = sprintf( "<a class='last-page' href='%s'><span class='screen-reader-text'>%s</span><span aria-hidden='true'>%s</span></a>",
 				esc_url( add_query_arg( 'paged', $total_pages, $current_url ) ),
-				__( 'Last page' ),
+				__( 'Last page', 'default' ),
 				'&raquo;'
 			);
 		}
@@ -1030,7 +1030,7 @@ class Popup4Phone_List_Table {
 
 		if ( ! empty( $columns['cb'] ) ) {
 			static $cb_counter = 1;
-			$columns['cb'] = '<label class="screen-reader-text" for="cb-select-all-' . $cb_counter . '">' . __( 'Select All' ) . '</label>'
+			$columns['cb'] = '<label class="screen-reader-text" for="cb-select-all-' . $cb_counter . '">' . __( 'Select All', 'default' ) . '</label>'
 				. '<input id="cb-select-all-' . $cb_counter . '" type="checkbox" />';
 			$cb_counter++;
 		}

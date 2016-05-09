@@ -115,7 +115,7 @@ class Popup4Phone_Main extends Popup4Phone_Main_Base
 	}
 
 
-	public function admin_notices()
+	public function action_admin_notices()
 	{
 		$n = new Popup4Phone_Notices_Admin;
 		print $n->out();

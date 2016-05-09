@@ -4,8 +4,8 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: Tue Jan 05 2016 16:31:19 GMT+0700 (Юго-Восточная Азия "
 "(зима))\n"
-"PO-Revision-Date: Wed Mar 30 2016 22:08:29 GMT+0700 (Ð®Ð³Ð¾-"
-"ÐÐ¾ÑÑÐ¾ÑÐ½Ð°Ñ ÐÐ·Ð¸Ñ (Ð·Ð¸Ð¼Ð°))\n"
+"PO-Revision-Date: Mon May 09 2016 15:55:51 GMT+0700 (Юго-Восточная Азия "
+"(зима))\n"
 "Last-Translator: admin <ivan@ivanpro.com>\n"
 "Language-Team: \n"
 "Language: Russian\n"
@@ -25,22 +25,9 @@ msgstr ""
 "X-Loco-Target-Locale: ru_RU\n"
 "X-Generator: Loco - https://localise.biz/"
 
-#: ../includes/components/settings.php:368
-msgid "Label / phone handset color"
-msgstr "Цвет надписи / трубки"
-
-#: ../includes/components/settings.php:387
-msgid "Multiple comma-separated emails can be specified"
-msgstr "Вы можете указать несколько e-mail, разделенных запятой"
-
-#: ../templates/admin/admin_header.php:3
-#, php-format
-msgid "Want to have more leads? Click to get %s"
-msgstr "Хотите получать больше лидов? Щелкните, чтобы получить %s"
-
-#: ../templates/admin/help.tpl.php:43
-msgid "Popover/inline button, where the user can click and open the form"
-msgstr "Кнопка, встроенная или поверх страницы, открывающая форму по щелчку"
+#: ../includes/components/settings.php:224
+msgid "Any questions?"
+msgstr "Хотите что-то уточнить?"
 
 #. Name of the plugin
 msgid "Popup4Phone"
@@ -62,115 +49,115 @@ msgstr "Ivan Skorodumov"
 msgid "http://popup4phone.com/author"
 msgstr "http://popup4phone.com/author/?lang=ru"
 
-#: ../includes/main.php:167 ../templates/admin/integrations.tpl.php:3
+#: ../includes/main.php:104 ../templates/admin/integrations.tpl.php:3
 msgid "Integrations"
 msgstr "Интеграции"
 
-#: ../includes/components/help.php:48 ../templates/admin/help.tpl.php:3
+#: ../includes/components/help.php:39 ../templates/admin/help.tpl.php:3
 msgid "Help"
 msgstr "Справка"
 
-#: ../includes/components/leads-table.php:40
+#: ../includes/components/leads-table.php:30
 msgid "Lead"
 msgstr "Заявка (лид)"
 
-#: ../includes/components/leads-table.php:41 ../includes/components/leads.php:31 .
+#: ../includes/components/leads-table.php:31 ../includes/components/leads.php:31 .
 #: ./includes/components/leads.php:40
 msgid "Leads"
 msgstr "Заявки (лиды)"
 
-#: ../includes/components/leads-table.php:127
+#: ../includes/components/leads-table.php:117
 msgid "No leads"
 msgstr "Нет заявок"
 
-#: ../includes/components/leads-table.php:154 ../includes/components/leads-table.
-#: php:223 ../includes/components/leads.php:198
+#: ../includes/components/leads-table.php:144 ../includes/components/leads-table.
+#: php:213 ../includes/components/leads.php:203
 msgid "Web stat"
 msgstr "Веб-аналитика"
 
-#: ../includes/components/leads-table.php:208
+#: ../includes/components/leads-table.php:198
 msgid "Time"
 msgstr "Время"
 
-#: ../includes/components/leads-table.php:218 ../includes/components/settings.php:
-#: 232
+#: ../includes/components/leads-table.php:208 ../includes/components/settings.php:
+#: 223
 msgid "Title"
 msgstr "Заголовок"
 
-#: ../includes/components/leads-table.php:288
+#: ../includes/components/leads-table.php:278
 msgid "Delete"
 msgstr "Удалить"
 
-#: ../includes/components/leads-table.php:346
+#: ../includes/components/leads-table.php:336
 #, php-format
 msgid "Lead(s) #%s have been deleted"
 msgstr "Заявка (заявки) #%s были удалены\n"
 
-#: ../includes/components/leads.php:164
+#: ../includes/components/leads.php:169
 msgid "Title of the page"
 msgstr "Заголовок страницы, где был отправлена форма"
 
-#: ../includes/components/leads.php:165
+#: ../includes/components/leads.php:170
 msgid "Referer"
 msgstr "Источник перехода посетителя"
 
-#: ../includes/components/leads.php:166
+#: ../includes/components/leads.php:171
 msgid "Landing page"
 msgstr "Начальная страница посещения"
 
-#: ../includes/components/leads.php:167
+#: ../includes/components/leads.php:172
 msgid "Visited pages"
 msgstr "Страницы, посещенные на сайте"
 
-#: ../includes/components/leads.php:168
+#: ../includes/components/leads.php:173
 msgid "Time of beginning of the session"
 msgstr "Время начала посещения"
 
-#: ../includes/components/leads.php:170
+#: ../includes/components/leads.php:175
 msgid "Browser"
 msgstr "Браузер"
 
-#: ../includes/components/settings.php:38 ../templates/admin/settings.tpl.php:11
+#: ../includes/components/settings.php:29 ../templates/admin/settings.tpl.php:11
 msgid "Settings"
 msgstr "Настройки"
 
-#: ../includes/components/settings.php:107 ../templates/admin/help.tpl.php:68
+#: ../includes/components/settings.php:98 ../templates/admin/help.tpl.php:68
 msgid "Name"
 msgstr "Имя"
 
-#: ../includes/components/settings.php:108
+#: ../includes/components/settings.php:99
 msgid "Phone"
 msgstr "Телефон"
 
-#: ../includes/components/settings.php:110
+#: ../includes/components/settings.php:101
 msgid "Message"
 msgstr "Сообщение"
 
-#: ../includes/components/settings.php:117 ../includes/components/settings.php:182
+#: ../includes/components/settings.php:108 ../includes/components/settings.php:173
 msgid "Popup form"
 msgstr "Всплывающая форма"
 
-#: ../includes/components/settings.php:118
+#: ../includes/components/settings.php:109
 msgid "Inline form"
 msgstr "Встроенная форма"
 
-#: ../includes/components/settings.php:119
+#: ../includes/components/settings.php:110
 msgid "Required"
 msgstr "Обязательно"
 
-#: ../includes/components/settings.php:120 ../includes/components/settings.php:322
+#: ../includes/components/settings.php:111 ../includes/components/settings.php:313
 msgid "Label"
 msgstr "Метка"
 
-#: ../includes/components/settings.php:121
+#: ../includes/components/settings.php:112
 msgid "Placeholder"
 msgstr "Метка-заполнитель"
 
-#: ../includes/components/settings.php:138
+#: ../includes/components/settings.php:129
 msgid "Field"
 msgstr "Поле"
 
-#: ../includes/components/settings.php:174
+#: ../includes/components/settings.php:165
 msgid ""
 "Changes in the settings will take effect only after reloading of the page "
 "containing the form/button"
@@ -178,232 +165,241 @@ msgstr ""
 "Изменения в настройках вступают в силу только после перезагрузки страницы, "
 "где отображается форма/кнопка"
 
-#: ../includes/components/settings.php:178
+#: ../includes/components/settings.php:169
 msgid "Main"
 msgstr "Основное"
 
-#: ../includes/components/settings.php:187
+#: ../includes/components/settings.php:178
 msgid "Button"
 msgstr "Всплывающая кнопка"
 
-#: ../includes/components/settings.php:192
+#: ../includes/components/settings.php:183
 msgid "Form"
 msgstr "Форма"
 
-#: ../includes/components/settings.php:197
+#: ../includes/components/settings.php:188
 msgid "Fields"
 msgstr "Поля"
 
-#: ../includes/components/settings.php:202
+#: ../includes/components/settings.php:193
 msgid "Notifications"
 msgstr "Уведомления"
 
-#: ../includes/components/settings.php:206 ../includes/components/settings.php:478
+#: ../includes/components/settings.php:197 ../includes/components/settings.php:469
 msgid "Tracking"
 msgstr "Отслеживание"
 
-#: ../includes/components/settings.php:216
+#: ../includes/components/settings.php:207
 msgid "Auto popup"
 msgstr "Открывать автоматически"
 
-#: ../includes/components/settings.php:221
+#: ../includes/components/settings.php:212
 msgid "Delay for auto popup, seconds"
 msgstr "Задержка, секунд"
 
-#: ../includes/components/settings.php:226
+#: ../includes/components/settings.php:217
 msgid "Pause between the repeated shows for the same visitor, days"
 msgstr "Пауза между повторными показами для того же посетителя, дней"
 
-#: ../includes/components/settings.php:233
-msgid "Can't find something you want?"
-msgstr "У Вас не получается найти то, что Вы ищете?"
-
-#: ../includes/components/settings.php:237
+#: ../includes/components/settings.php:228
 msgid "Examples: "
 msgstr "Примеры:"
 
-#: ../includes/components/settings.php:239
+#: ../includes/components/settings.php:230
 msgid "ask if user can't find interesting details"
 msgstr "спросить, есть ли трудности с поиском информации"
 
-#: ../includes/components/settings.php:241
+#: ../includes/components/settings.php:232
 msgid "invite to test"
 msgstr "предложить попробовать"
 
-#: ../includes/components/settings.php:243
+#: ../includes/components/settings.php:234
 msgid "offer to request a call back"
 msgstr "предложить перезвонить"
 
-#: ../includes/components/settings.php:245
+#: ../includes/components/settings.php:236
 msgid "highlight current promotion"
 msgstr "предложить участие в какой-то акции"
 
-#: ../includes/components/settings.php:247
+#: ../includes/components/settings.php:238
 msgid "give special promotion for the form submission"
 msgstr "специальное предложение за заполнение формы"
 
-#: ../includes/components/settings.php:284
+#: ../includes/components/settings.php:275
 msgid "Label for submit button"
 msgstr "Надпись на кнопке отправки формы"
 
-#: ../includes/components/settings.php:289
+#: ../includes/components/settings.php:280
 msgid "Message for show during form submission"
 msgstr "Сообщение во время отправки формы"
 
-#: ../includes/components/settings.php:290
+#: ../includes/components/settings.php:281
 msgid "Form is being sent"
 msgstr "Форма отправляется"
 
-#: ../includes/components/settings.php:294
+#: ../includes/components/settings.php:285
 msgid "Message for show after the form submission"
 msgstr "Сообщение после отправки формы"
 
-#: ../includes/components/settings.php:295
+#: ../includes/components/settings.php:286
 msgid "Thanks for contacting us! We will get in touch with you shortly"
 msgstr "Спасибо! Мы свяжемся с Вами в ближайшее время"
 
-#: ../includes/components/settings.php:301
+#: ../includes/components/settings.php:292
 msgid "Show copyright link"
 msgstr "Отображать ссылку на сайт разработчика"
 
-#: ../includes/components/settings.php:310
+#: ../includes/components/settings.php:301
 msgid "Popover button enabled"
 msgstr "Отобразить кнопку вызова (поверх страницы)"
 
-#: ../includes/components/settings.php:316
+#: ../includes/components/settings.php:307
 msgid "Use label instead icon"
 msgstr "Использовать надпись вместо иконки"
 
-#: ../includes/components/settings.php:328
+#: ../includes/components/settings.php:319
 msgid "Font size"
 msgstr "Размер шрифта"
 
-#: ../includes/components/settings.php:329 ../includes/components/settings.php:
-#: 344 ../includes/components/settings.php:350 ../includes/components/settings.
-#: php:356 ../includes/components/settings.php:362
+#: ../includes/components/settings.php:320 ../includes/components/settings.php:
+#: 335 ../includes/components/settings.php:341 ../includes/components/settings.
+#: php:347 ../includes/components/settings.php:353
 msgid "Pixels"
 msgstr "Пикселей"
 
-#: ../includes/components/settings.php:335
+#: ../includes/components/settings.php:326
 msgid "Animate (bounce)"
 msgstr "Включить анимацию для кнопки вызова (подпрыгивание)"
 
-#: ../includes/components/settings.php:341
+#: ../includes/components/settings.php:332
 msgid "Bottom offset"
 msgstr "Отступ снизу"
 
-#: ../includes/components/settings.php:347
+#: ../includes/components/settings.php:338
 msgid "Right offset"
 msgstr "Отступ справа"
 
-#: ../includes/components/settings.php:353
+#: ../includes/components/settings.php:344
 msgid "Width"
 msgstr "Ширина"
 
-#: ../includes/components/settings.php:359
+#: ../includes/components/settings.php:350
 msgid "Height"
 msgstr "Высота"
 
-#: ../includes/components/settings.php:364
+#: ../includes/components/settings.php:355
 #, php-format
 msgid "Hexadecimal value, for example, %s"
 msgstr "Шестнадцатеричное значение, например, %s"
 
-#: ../includes/components/settings.php:376
+#: ../includes/components/settings.php:359
+msgid "Label / phone handset color"
+msgstr "Цвет надписи / трубки"
+
+#: ../includes/components/settings.php:367
 msgid "Background color"
 msgstr "Фон всплывающей кнопки"
 
-#: ../includes/components/settings.php:384
+#: ../includes/components/settings.php:375
 msgid "Send notify about new lead to email"
 msgstr "Отправлять уведомление о новой заявке на e-mail"
 
-#: ../includes/components/settings.php:389
+#: ../includes/components/settings.php:378
+msgid "Multiple comma-separated emails can be specified"
+msgstr "Вы можете указать несколько e-mail, разделенных запятой"
+
+#: ../includes/components/settings.php:380
 msgid "new request on web-site (*|SITE|*)"
 msgstr "новый запрос на сайте (*|SITE|*)"
 
-#: ../includes/components/settings.php:391
+#: ../includes/components/settings.php:382
 msgid "Subject of email"
 msgstr "Тема email"
 
-#: ../includes/components/settings.php:399
+#: ../includes/components/settings.php:390
 msgid "Body of email"
 msgstr "Текст email"
 
-#: ../includes/components/settings.php:407
+#: ../includes/components/settings.php:398
 msgid "Send events"
 msgstr "Отправлять события"
 
-#: ../includes/components/settings.php:412
+#: ../includes/components/settings.php:403
 msgid "Events *category*"
 msgstr "Категория (category) событий"
 
-#: ../includes/components/settings.php:417
+#: ../includes/components/settings.php:408
 msgid "Events on popup form opening"
 msgstr "События при открытии всплывающей формы"
 
-#: ../includes/components/settings.php:421 ../includes/components/settings.php:440
+#: ../includes/components/settings.php:412 ../includes/components/settings.php:431
 msgid "Action"
 msgstr "Действие (action)"
 
-#: ../includes/components/settings.php:426
+#: ../includes/components/settings.php:417
 msgid "Label on *auto* opening"
 msgstr "Ярлык (label) при *автоматическом* открытии"
 
-#: ../includes/components/settings.php:431
+#: ../includes/components/settings.php:422
 msgid "Label on opening *by click*"
 msgstr "Ярлык (label) при открытии *по щелчку*"
 
-#: ../includes/components/settings.php:436
+#: ../includes/components/settings.php:427
 msgid "Events on submit"
 msgstr "События при отправке формы"
 
-#: ../includes/components/settings.php:445
+#: ../includes/components/settings.php:436
 msgid "Label for *inline* form"
 msgstr "Ярлык (label) при отправке встроенной формы"
 
-#: ../includes/components/settings.php:450
+#: ../includes/components/settings.php:441
 msgid "Label for *popup* form"
 msgstr "Ярлык (label) при отправке всплывающей формы"
 
-#: ../includes/components/settings.php:455
+#: ../includes/components/settings.php:446
 msgid "Isn't needed if you had already inserted Google Analytics code"
 msgstr "Не требуется, если код Google Analytics уже присутствует на сайте"
 
-#: ../includes/components/settings.php:458
+#: ../includes/components/settings.php:449
 msgid "Google Analytics code"
 msgstr "Код Google Analytics"
 
-#: ../includes/components/settings.php:462
+#: ../includes/components/settings.php:453
 msgid "Add code"
 msgstr "Добавить код"
 
-#: ../includes/components/settings.php:474
+#: ../includes/components/settings.php:465
 #, php-format
 msgid "Looks like: %s (where to get it: %s)."
 msgstr "Выглядит как %s (как узнать: %s)."
 
-#: ../includes/components/settings.php:482
+#: ../includes/components/settings.php:473
 msgid "JavaScript code for execution after the form submission"
 msgstr "Код JavaScript для выполнения после отправки формы"
 
-#: ../includes/components/settings.php:485
+#: ../includes/components/settings.php:476
 msgid "To integrate with other analytic / conversion tracking systems, etc."
 msgstr ""
 "Чтобы интегрировать с другими системами аналитики / отслеживания конверсий. "
 "К примеру, для отслеживания событий в Яндекс.Метрике можно использовать код "
 "вида yaCounterXXXXXX.reachGoal(\"popup4phone_submit\")"
 
-#: ../includes/components/settings.php:489
+#: ../includes/components/settings.php:480
 msgid "Tag on submit"
 msgstr "Тег при отправке формы"
 
-#: ../includes/components/settings.php:492
+#: ../includes/components/settings.php:483
 msgid "For example, Google Conversion Tag"
 msgstr "Например, тег Google Conversion"
 
 #: ../templates/_form-general.tpl.php:17
 msgid "Error"
 msgstr "Ошибка"
+
+#: ../templates/admin/admin_header.php:3
+#, php-format
+msgid "Want to have more leads? Click to get %s"
+msgstr "Хотите получать больше лидов? Щелкните, чтобы получить %s"
 
 #: ../templates/admin/help.tpl.php:12
 #, php-format
@@ -428,6 +424,10 @@ msgstr "Есть три способа использовать плагин Pop
 #: ../templates/admin/help.tpl.php:42
 msgid "Auto popup with delay after loading of the page"
 msgstr "Отрывать автоматически после загрузки страницы"
+
+#: ../templates/admin/help.tpl.php:43
+msgid "Popover/inline button, where the user can click and open the form"
+msgstr "Кнопка, встроенная или поверх страницы, открывающая форму по щелчку"
 
 #: ../templates/admin/help.tpl.php:44
 msgid "Shortcode/inline form"
